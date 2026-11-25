@@ -9,8 +9,8 @@ import (
 
 // goverter:variables
 // goverter:output:file ./generated.go
-// goverter:extend aqua/pkg/utils/convert:ToPBTime
-// goverter:extend aqua/pkg/utils/convert:IntToInt32
+// goverter:extend github.com/ipuppet/aqua/server/pkg/utils/convert:ToPBTime
+// goverter:extend github.com/ipuppet/aqua/server/pkg/utils/convert:IntToInt32
 // goverter:useZeroValueOnPointerInconsistency
 // goverter:ignoreUnexported
 var (

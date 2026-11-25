@@ -142,23 +142,23 @@ path = Path(sys.argv[1])
 name = sys.argv[2]
 text = path.read_text(encoding="utf-8")
 
-import_line = f'\t"aqua/services/{name}"'
+import_line = f'\t"github.com/ipuppet/aqua/server/services/{name}"'
 service_line = f'\t\t{{Name: {name}.ServiceName, Factory: {name}.Assemble}},'
 
 if import_line in text and f"{name}.ServiceName" in text:
     print(f"   mono already registers {name}")
     raise SystemExit(0)
 
-# Insert import (alphabetically among aqua/services/*).
+# Insert import (alphabetically among github.com/ipuppet/aqua/server/services/*).
 import_block = re.search(r"import \(\n(.*?\n)\)", text, re.S)
 if not import_block:
     raise SystemExit("mono main.go: import block not found")
 imports = import_block.group(1).splitlines(keepends=True)
-svc_imports = [ln for ln in imports if '"aqua/services/' in ln]
+svc_imports = [ln for ln in imports if '"github.com/ipuppet/aqua/server/services/' in ln]
 other = [ln for ln in imports if ln not in svc_imports]
 svc_imports.append(import_line + "\n")
 # Keep stable order: existing style is not strictly alpha (root, admin, ...).
-# Append before closing of service imports — place after last aqua/services import.
+# Append before closing of service imports — place after last github.com/ipuppet/aqua/server/services import.
 svc_imports_sorted = sorted(set(svc_imports), key=lambda s: s.strip().strip('"').split("/")[-1])
 new_imports = "".join(other + svc_imports_sorted)
 text = text[: import_block.start(1)] + new_imports + text[import_block.end(1) :]

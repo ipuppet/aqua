@@ -4,7 +4,7 @@ package aqua.__SERVICE__.v1;
 
 import "google/api/annotations.proto";
 
-option go_package = "aqua/gen/go/aqua/__SERVICE__/v1;__SERVICE__v1";
+option go_package = "github.com/ipuppet/aqua/server/gen/go/aqua/__SERVICE__/v1;__SERVICE__v1";
 
 // __Service__Service is the public API for the __SERVICE__ microservice.
 service __Service__Service {

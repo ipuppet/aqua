@@ -17,8 +17,8 @@ func nullStringToString(value types.NullString) string {
 
 // goverter:variables
 // goverter:output:file ./generated.go
-// goverter:extend aqua/services/user/logic:nullStringToString
-// goverter:extend aqua/pkg/utils/convert:CloneTime
+// goverter:extend github.com/ipuppet/aqua/server/services/user/logic:nullStringToString
+// goverter:extend github.com/ipuppet/aqua/server/pkg/utils/convert:CloneTime
 // goverter:useZeroValueOnPointerInconsistency
 // goverter:ignoreUnexported
 var (
