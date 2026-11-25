@@ -6,13 +6,13 @@ package passport
 import (
 	"github.com/google/wire"
 
-	"aqua/pkg/infra/bootstrap"
-	"aqua/pkg/infra/config"
-	"aqua/pkg/infra/persist"
-	"aqua/pkg/rbac"
-	"aqua/pkg/transport/token"
-	"aqua/services/passport/dao"
-	"aqua/services/passport/logic"
+	"github.com/ipuppet/aqua/server/pkg/infra/bootstrap"
+	"github.com/ipuppet/aqua/server/pkg/infra/config"
+	"github.com/ipuppet/aqua/server/pkg/infra/persist"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/pkg/transport/token"
+	"github.com/ipuppet/aqua/server/services/passport/dao"
+	"github.com/ipuppet/aqua/server/services/passport/logic"
 )
 
 // buildModule assembles service module.

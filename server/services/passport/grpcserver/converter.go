@@ -3,8 +3,8 @@ package grpcserver
 //go:generate go tool goverter gen .
 
 import (
-	passportv1 "aqua/gen/go/aqua/passport/v1"
-	auth "aqua/services/passport/domain"
+	passportv1 "github.com/ipuppet/aqua/server/gen/go/aqua/passport/v1"
+	auth "github.com/ipuppet/aqua/server/services/passport/domain"
 )
 
 // goverter:variables

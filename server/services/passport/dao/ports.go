@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"aqua/pkg/infra/cache"
-	"aqua/pkg/infra/database"
-	auth "aqua/services/passport/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/cache"
+	"github.com/ipuppet/aqua/server/pkg/infra/database"
+	auth "github.com/ipuppet/aqua/server/services/passport/domain"
 )
 
 // AuthRepository exposes all persistence operations used by the passport logic layer.

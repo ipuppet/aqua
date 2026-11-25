@@ -10,10 +10,10 @@ import (
 
 	"github.com/meilisearch/meilisearch-go"
 
-	"aqua/pkg/infra/config"
-	"aqua/pkg/infra/logutil"
-	"aqua/pkg/infra/models"
-	blog "aqua/services/blog/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/config"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	"github.com/ipuppet/aqua/server/pkg/infra/models"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 const blogIndexName = "blog"

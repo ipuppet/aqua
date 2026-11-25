@@ -291,7 +291,7 @@ const file_aqua_passport_v1_admin_proto_rawDesc = "" +
 	"\x19RevokeUserSessionResponse2\xc4\x02\n" +
 	"\x14AdminPassportService\x12\x8c\x01\n" +
 	"\x10ListUserSessions\x12).aqua.passport.v1.ListUserSessionsRequest\x1a*.aqua.passport.v1.ListUserSessionsResponse\"!\x82\xd3\xe4\x93\x02\x1b\x12\x19/api/users/{uid}/sessions\x12\x9c\x01\n" +
-	"\x11RevokeUserSession\x12*.aqua.passport.v1.RevokeUserSessionRequest\x1a+.aqua.passport.v1.RevokeUserSessionResponse\".\x82\xd3\xe4\x93\x02(*&/api/users/{uid}/sessions/{session_id}B)Z'aqua/gen/go/aqua/passport/v1;passportv1b\x06proto3"
+	"\x11RevokeUserSession\x12*.aqua.passport.v1.RevokeUserSessionRequest\x1a+.aqua.passport.v1.RevokeUserSessionResponse\".\x82\xd3\xe4\x93\x02(*&/api/users/{uid}/sessions/{session_id}BCZAgithub.com/ipuppet/aqua/server/gen/go/aqua/passport/v1;passportv1b\x06proto3"
 
 var (
 	file_aqua_passport_v1_admin_proto_rawDescOnce sync.Once

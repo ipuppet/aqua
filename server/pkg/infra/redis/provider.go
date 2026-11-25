@@ -9,9 +9,9 @@ import (
 	"github.com/google/wire"
 	"github.com/redis/go-redis/v9"
 
-	"aqua/pkg/infra/cache"
-	"aqua/pkg/infra/config"
-	"aqua/pkg/infra/models"
+	"github.com/ipuppet/aqua/server/pkg/infra/cache"
+	"github.com/ipuppet/aqua/server/pkg/infra/config"
+	"github.com/ipuppet/aqua/server/pkg/infra/models"
 )
 
 // redisPingTimeout 是每次探活 Ping 的最长等待时间，同时被 reconnect.go 中 tryConnect 使用。

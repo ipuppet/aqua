@@ -10,7 +10,7 @@ import (
 
 	clientv3 "go.etcd.io/etcd/client/v3"
 
-	"aqua/pkg/infra/models"
+	"github.com/ipuppet/aqua/server/pkg/infra/models"
 )
 
 // ServiceInstance represents a registered service instance with its connection details.

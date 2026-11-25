@@ -38,7 +38,7 @@ const file_aqua_blog_v1_admin_proto_rawDesc = "" +
 	"\bSetAbout\x12\x1d.aqua.blog.v1.SetAboutRequest\x1a\x1e.aqua.blog.v1.SetAboutResponse\"\x15\x82\xd3\xe4\x93\x02\x0f:\x01*\x1a\n" +
 	"/api/about\x12v\n" +
 	"\x0eGetAccessStats\x12#.aqua.blog.v1.GetAccessStatsRequest\x1a$.aqua.blog.v1.GetAccessStatsResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/api/access/{day}\x12h\n" +
-	"\tSyncMeili\x12\x1e.aqua.blog.v1.SyncMeiliRequest\x1a\x1f.aqua.blog.v1.SyncMeiliResponse\"\x1a\x82\xd3\xe4\x93\x02\x14:\x01*\"\x0f/api/meili/syncB!Z\x1faqua/gen/go/aqua/blog/v1;blogv1b\x06proto3"
+	"\tSyncMeili\x12\x1e.aqua.blog.v1.SyncMeiliRequest\x1a\x1f.aqua.blog.v1.SyncMeiliResponse\"\x1a\x82\xd3\xe4\x93\x02\x14:\x01*\"\x0f/api/meili/syncB;Z9github.com/ipuppet/aqua/server/gen/go/aqua/blog/v1;blogv1b\x06proto3"
 
 var file_aqua_blog_v1_admin_proto_goTypes = []any{
 	(*GetArticleRequest)(nil),      // 0: aqua.blog.v1.GetArticleRequest

@@ -3,8 +3,8 @@ package logic
 //go:generate go tool goverter gen .
 
 import (
-	"aqua/pkg/types"
-	blog "aqua/services/blog/domain"
+	"github.com/ipuppet/aqua/server/pkg/types"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 func nullStringToString(value types.NullString) string {

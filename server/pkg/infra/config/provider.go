@@ -3,7 +3,7 @@ package config
 import (
 	"github.com/google/wire"
 
-	"aqua/pkg/infra/models"
+	"github.com/ipuppet/aqua/server/pkg/infra/models"
 )
 
 // MeiliSearchConfigProvider returns the latest MeiliSearchConfig snapshot.

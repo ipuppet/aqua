@@ -6,11 +6,11 @@ import (
 	"log/slog"
 	"slices"
 
-	"aqua/pkg/infra/filestore"
-	"aqua/pkg/infra/logutil"
-	"aqua/pkg/rbac"
-	"aqua/services/user/dao"
-	user "aqua/services/user/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/filestore"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/services/user/dao"
+	user "github.com/ipuppet/aqua/server/services/user/domain"
 )
 
 // UserService is the logic implementation.

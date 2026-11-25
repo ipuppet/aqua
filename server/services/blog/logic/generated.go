@@ -4,8 +4,8 @@
 package logic
 
 import (
-	convert "aqua/pkg/utils/convert"
-	domain "aqua/services/blog/domain"
+	convert "github.com/ipuppet/aqua/server/pkg/utils/convert"
+	domain "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 func init() {

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"aqua/pkg/infra/bootstrap"
-	"aqua/services/passport"
+	"github.com/ipuppet/aqua/server/pkg/infra/bootstrap"
+	"github.com/ipuppet/aqua/server/services/passport"
 )
 
 func main() {

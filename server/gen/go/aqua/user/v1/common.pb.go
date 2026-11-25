@@ -1995,7 +1995,7 @@ const file_aqua_user_v1_common_proto_rawDesc = "" +
 	"\x1bDeleteRolePermissionRequest\x12\x17\n" +
 	"\arole_id\x18\x01 \x01(\x05R\x06roleId\x12#\n" +
 	"\rpermission_id\x18\x02 \x01(\x05R\fpermissionId\"\x1e\n" +
-	"\x1cDeleteRolePermissionResponseB!Z\x1faqua/gen/go/aqua/user/v1;userv1b\x06proto3"
+	"\x1cDeleteRolePermissionResponseB;Z9github.com/ipuppet/aqua/server/gen/go/aqua/user/v1;userv1b\x06proto3"
 
 var (
 	file_aqua_user_v1_common_proto_rawDescOnce sync.Once

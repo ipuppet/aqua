@@ -5,7 +5,7 @@ import (
 	"log/slog"
 	"time"
 
-	blog "aqua/services/blog/domain"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 const searchIndexTimeout = 15 * time.Second

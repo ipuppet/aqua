@@ -7,12 +7,12 @@ import (
 	"github.com/gin-gonic/gin"
 	"google.golang.org/grpc"
 
-	passportv1 "aqua/gen/go/aqua/passport/v1"
-	"aqua/pkg/infra/bootstrap"
-	"aqua/pkg/rbac"
-	"aqua/pkg/transport/gateway"
-	"aqua/services/passport/grpcserver"
-	"aqua/services/passport/logic"
+	passportv1 "github.com/ipuppet/aqua/server/gen/go/aqua/passport/v1"
+	"github.com/ipuppet/aqua/server/pkg/infra/bootstrap"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/pkg/transport/gateway"
+	"github.com/ipuppet/aqua/server/services/passport/grpcserver"
+	"github.com/ipuppet/aqua/server/services/passport/logic"
 )
 
 const ServiceName = "passport"

@@ -6,10 +6,10 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"aqua/pkg/apperr"
-	"aqua/pkg/transport/authctx"
-	"aqua/pkg/transport/response"
-	"aqua/pkg/transport/token"
+	"github.com/ipuppet/aqua/server/pkg/apperr"
+	"github.com/ipuppet/aqua/server/pkg/transport/authctx"
+	"github.com/ipuppet/aqua/server/pkg/transport/response"
+	"github.com/ipuppet/aqua/server/pkg/transport/token"
 )
 
 // Authenticate verifies JWT (AuthN) and stores TokenUser in request context.

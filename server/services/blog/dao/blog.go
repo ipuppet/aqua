@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"aqua/pkg/infra/database"
-	blog "aqua/services/blog/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/database"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 func (r *repository) GetArticle(ctx context.Context, aid int) (*blog.Article, error) {

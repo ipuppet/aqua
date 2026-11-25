@@ -12,9 +12,9 @@ import (
 	"strings"
 	"time"
 
-	"aqua/pkg/infra/logutil"
-	"aqua/pkg/utils/crypto"
-	"aqua/services/admin/types"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	"github.com/ipuppet/aqua/server/pkg/utils/crypto"
+	"github.com/ipuppet/aqua/server/services/admin/types"
 )
 
 // localBackend stores images on local disk.

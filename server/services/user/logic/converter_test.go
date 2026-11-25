@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	user "aqua/services/user/domain"
+	user "github.com/ipuppet/aqua/server/services/user/domain"
 )
 
 func TestToUserModelResponseKeepsTimestamps(t *testing.T) {

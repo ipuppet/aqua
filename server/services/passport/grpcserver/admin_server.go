@@ -3,8 +3,8 @@ package grpcserver
 import (
 	"context"
 
-	passportv1 "aqua/gen/go/aqua/passport/v1"
-	"aqua/services/passport/logic"
+	passportv1 "github.com/ipuppet/aqua/server/gen/go/aqua/passport/v1"
+	"github.com/ipuppet/aqua/server/services/passport/logic"
 )
 
 // AdminServer provides gRPC APIs for admin-side passport operations.

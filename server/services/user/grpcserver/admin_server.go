@@ -4,11 +4,11 @@ import (
 	"context"
 	"database/sql"
 
-	userv1 "aqua/gen/go/aqua/user/v1"
-	"aqua/pkg/rbac"
-	"aqua/pkg/types"
-	user "aqua/services/user/domain"
-	"aqua/services/user/logic"
+	userv1 "github.com/ipuppet/aqua/server/gen/go/aqua/user/v1"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/pkg/types"
+	user "github.com/ipuppet/aqua/server/services/user/domain"
+	"github.com/ipuppet/aqua/server/services/user/logic"
 )
 
 // AdminServer provides gRPC APIs for admin-side user operations.

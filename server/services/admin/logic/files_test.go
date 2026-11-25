@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"aqua/pkg/utils/crypto"
-	"aqua/services/admin/logic"
-	"aqua/services/admin/types"
+	"github.com/ipuppet/aqua/server/pkg/utils/crypto"
+	"github.com/ipuppet/aqua/server/services/admin/logic"
+	"github.com/ipuppet/aqua/server/services/admin/types"
 )
 
 type stubFileConfigProvider struct {

@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	auth "aqua/services/passport/domain"
+	auth "github.com/ipuppet/aqua/server/services/passport/domain"
 )
 
 func userSessionKeyPattern(uid int) string {

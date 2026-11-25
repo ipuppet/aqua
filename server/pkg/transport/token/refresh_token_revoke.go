@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"aqua/pkg/infra/cache"
+	"github.com/ipuppet/aqua/server/pkg/infra/cache"
 
 	"github.com/redis/go-redis/v9"
 )

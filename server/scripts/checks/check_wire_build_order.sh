@@ -109,13 +109,13 @@ def classify_arg(arg: str, aliases: dict[str, str]) -> int:
     prefix = arg.split(".", 1)[0]
     import_path = aliases.get(prefix, "")
 
-    if import_path == "aqua/pkg/infra/config" or import_path == "aqua/pkg/transport/token":
+    if import_path == "github.com/ipuppet/aqua/server/pkg/infra/config" or import_path == "github.com/ipuppet/aqua/server/pkg/transport/token":
         return 2
 
-    if import_path.startswith("aqua/services/"):
+    if import_path.startswith("github.com/ipuppet/aqua/server/services/"):
         return 4
 
-    if import_path.startswith("aqua/pkg/"):
+    if import_path.startswith("github.com/ipuppet/aqua/server/pkg/"):
         return 3
 
     return 4

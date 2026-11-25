@@ -5,8 +5,8 @@ import (
 	"database/sql"
 	"time"
 
-	"aqua/pkg/infra/cache"
-	"aqua/pkg/infra/database"
+	"github.com/ipuppet/aqua/server/pkg/infra/cache"
+	"github.com/ipuppet/aqua/server/pkg/infra/database"
 )
 
 const (

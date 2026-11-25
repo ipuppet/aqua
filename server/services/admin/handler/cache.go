@@ -5,9 +5,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"aqua/pkg/transport/middleware"
-	"aqua/pkg/transport/response"
-	"aqua/services/admin/dao"
+	"github.com/ipuppet/aqua/server/pkg/transport/middleware"
+	"github.com/ipuppet/aqua/server/pkg/transport/response"
+	"github.com/ipuppet/aqua/server/services/admin/dao"
 )
 
 // CacheHandler exposes cache management endpoints.

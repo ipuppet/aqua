@@ -3,8 +3,8 @@ package httpbind
 import (
 	"github.com/gin-gonic/gin"
 
-	"aqua/pkg/apperr"
-	"aqua/pkg/transport/response"
+	"github.com/ipuppet/aqua/server/pkg/apperr"
+	"github.com/ipuppet/aqua/server/pkg/transport/response"
 )
 
 // BindURI extracts URI parameters into obj.

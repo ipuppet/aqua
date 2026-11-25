@@ -6,9 +6,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"aqua/pkg/apperr"
-	"aqua/pkg/infra/logutil"
-	"aqua/pkg/transport/response"
+	"github.com/ipuppet/aqua/server/pkg/apperr"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	"github.com/ipuppet/aqua/server/pkg/transport/response"
 )
 
 // ErrorHandler recovers panics and writes a standard JSON error envelope.

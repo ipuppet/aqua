@@ -9,7 +9,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"aqua/pkg/apperr"
+	"github.com/ipuppet/aqua/server/pkg/apperr"
 )
 
 // MapError converts apperr (and similar) values into gRPC status errors.

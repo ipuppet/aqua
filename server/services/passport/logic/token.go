@@ -9,8 +9,8 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/google/uuid"
 
-	"aqua/pkg/transport/token"
-	authdomain "aqua/services/passport/domain"
+	"github.com/ipuppet/aqua/server/pkg/transport/token"
+	authdomain "github.com/ipuppet/aqua/server/services/passport/domain"
 )
 
 func (s *AuthService) generateAccessToken(um *authdomain.Account, roles []string) (string, error) {

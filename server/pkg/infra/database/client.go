@@ -7,8 +7,8 @@ import (
 	"log/slog"
 	"sync"
 
-	"aqua/pkg/infra/config"
-	"aqua/pkg/infra/models"
+	"github.com/ipuppet/aqua/server/pkg/infra/config"
+	"github.com/ipuppet/aqua/server/pkg/infra/models"
 )
 
 // Client wraps *sql.DB and swaps the underlying connection when app config changes.

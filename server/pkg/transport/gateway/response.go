@@ -5,7 +5,7 @@ import (
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"google.golang.org/protobuf/encoding/protojson"
 
-	"aqua/pkg/transport/authctx"
+	"github.com/ipuppet/aqua/server/pkg/transport/authctx"
 )
 
 // NewServeMux creates a [runtime.ServeMux] pre-configured with standard options.

@@ -100,7 +100,7 @@ const file_aqua_blog_v1_blog_proto_rawDesc = "" +
 	"\bListTags\x12\x1d.aqua.blog.v1.ListTagsRequest\x1a\x1e.aqua.blog.v1.ListTagsResponse\"\x11\x82\xd3\xe4\x93\x02\v\x12\t/api/tags\x12\x85\x01\n" +
 	"\x11ListArticlesByTag\x12&.aqua.blog.v1.ListArticlesByTagRequest\x1a'.aqua.blog.v1.ListArticlesByTagResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/tags/{id}/articles\x12]\n" +
 	"\bGetAbout\x12\x1d.aqua.blog.v1.GetAboutRequest\x1a\x1e.aqua.blog.v1.GetAboutResponse\"\x12\x82\xd3\xe4\x93\x02\f\x12\n" +
-	"/api/aboutB!Z\x1faqua/gen/go/aqua/blog/v1;blogv1b\x06proto3"
+	"/api/aboutB;Z9github.com/ipuppet/aqua/server/gen/go/aqua/blog/v1;blogv1b\x06proto3"
 
 var (
 	file_aqua_blog_v1_blog_proto_rawDescOnce sync.Once

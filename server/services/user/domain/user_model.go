@@ -3,7 +3,7 @@ package user
 import (
 	"time"
 
-	"aqua/pkg/types"
+	"github.com/ipuppet/aqua/server/pkg/types"
 )
 
 // UserModelResponse represents the API response structure for a user record.

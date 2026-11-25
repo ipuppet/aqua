@@ -4,9 +4,9 @@
 package logic
 
 import (
-	rbac "aqua/pkg/rbac"
-	convert "aqua/pkg/utils/convert"
-	domain "aqua/services/user/domain"
+	rbac "github.com/ipuppet/aqua/server/pkg/rbac"
+	convert "github.com/ipuppet/aqua/server/pkg/utils/convert"
+	domain "github.com/ipuppet/aqua/server/services/user/domain"
 )
 
 func init() {

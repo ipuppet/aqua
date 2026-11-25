@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
-	"aqua/pkg/infra/logutil"
-	"aqua/pkg/utils/crypto"
-	"aqua/services/admin/pkg/openlist"
-	"aqua/services/admin/types"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	"github.com/ipuppet/aqua/server/pkg/utils/crypto"
+	"github.com/ipuppet/aqua/server/services/admin/pkg/openlist"
+	"github.com/ipuppet/aqua/server/services/admin/types"
 )
 
 // openlistBackend stores images on OpenList.

@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"aqua/pkg/infra/database"
-	"aqua/pkg/rbac"
-	user "aqua/services/user/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/database"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	user "github.com/ipuppet/aqua/server/services/user/domain"
 )
 
 func (r *repository) GetUserIDsByRoleID(ctx context.Context, id int) ([]int, error) {

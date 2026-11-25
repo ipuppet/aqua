@@ -3,8 +3,8 @@ package logic
 import (
 	"context"
 
-	"aqua/services/passport/dao"
-	auth "aqua/services/passport/domain"
+	"github.com/ipuppet/aqua/server/services/passport/dao"
+	auth "github.com/ipuppet/aqua/server/services/passport/domain"
 )
 
 // SessionService is the default SessionService implementation.

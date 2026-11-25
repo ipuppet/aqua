@@ -6,9 +6,9 @@ import (
 	"log/slog"
 	"time"
 
-	"aqua/pkg/infra/logutil"
-	"aqua/pkg/rbac"
-	"aqua/services/passport/dao"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/services/passport/dao"
 )
 
 const (

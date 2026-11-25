@@ -5,7 +5,7 @@ package aqua.passport.v1;
 import "aqua/passport/v1/admin.proto";
 import "google/api/annotations.proto";
 
-option go_package = "aqua/gen/go/aqua/passport/v1;passportv1";
+option go_package = "github.com/ipuppet/aqua/server/gen/go/aqua/passport/v1;passportv1";
 
 service PassportService {
   rpc LoginByPassword(LoginByPasswordRequest) returns (LoginByPasswordResponse) {

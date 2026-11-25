@@ -3,10 +3,10 @@ package dao
 import (
 	"context"
 
-	"aqua/pkg/infra/cache"
-	"aqua/pkg/infra/database"
-	"aqua/pkg/rbac"
-	user "aqua/services/user/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/cache"
+	"github.com/ipuppet/aqua/server/pkg/infra/database"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	user "github.com/ipuppet/aqua/server/services/user/domain"
 )
 
 // UserRepository exposes read/write operations required by public and private handlers.

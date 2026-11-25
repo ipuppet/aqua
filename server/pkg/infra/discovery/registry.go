@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
-	"aqua/pkg/infra/config"
-	"aqua/pkg/infra/models"
-	"aqua/pkg/infra/registry"
+	"github.com/ipuppet/aqua/server/pkg/infra/config"
+	"github.com/ipuppet/aqua/server/pkg/infra/models"
+	"github.com/ipuppet/aqua/server/pkg/infra/registry"
 )
 
 const (

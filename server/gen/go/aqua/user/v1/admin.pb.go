@@ -49,7 +49,7 @@ const file_aqua_user_v1_admin_proto_rawDesc = "" +
 	"\x10DeletePermission\x12%.aqua.user.v1.DeletePermissionRequest\x1a&.aqua.user.v1.DeletePermissionResponse\",\x82\xd3\xe4\x93\x02&*$/api/access-control/permissions/{id}\x12\x9e\x01\n" +
 	"\x13ListRolePermissions\x12(.aqua.user.v1.ListRolePermissionsRequest\x1a).aqua.user.v1.ListRolePermissionsResponse\"2\x82\xd3\xe4\x93\x02,\x12*/api/access-control/roles/{id}/permissions\x12\xad\x01\n" +
 	"\x11AddRolePermission\x12&.aqua.user.v1.AddRolePermissionRequest\x1a'.aqua.user.v1.AddRolePermissionResponse\"G\x82\xd3\xe4\x93\x02A\"?/api/access-control/roles/{role_id}/permissions/{permission_id}\x12\xb6\x01\n" +
-	"\x14DeleteRolePermission\x12).aqua.user.v1.DeleteRolePermissionRequest\x1a*.aqua.user.v1.DeleteRolePermissionResponse\"G\x82\xd3\xe4\x93\x02A*?/api/access-control/roles/{role_id}/permissions/{permission_id}B!Z\x1faqua/gen/go/aqua/user/v1;userv1b\x06proto3"
+	"\x14DeleteRolePermission\x12).aqua.user.v1.DeleteRolePermissionRequest\x1a*.aqua.user.v1.DeleteRolePermissionResponse\"G\x82\xd3\xe4\x93\x02A*?/api/access-control/roles/{role_id}/permissions/{permission_id}B;Z9github.com/ipuppet/aqua/server/gen/go/aqua/user/v1;userv1b\x06proto3"
 
 var file_aqua_user_v1_admin_proto_goTypes = []any{
 	(*ListUsersRequest)(nil),             // 0: aqua.user.v1.ListUsersRequest

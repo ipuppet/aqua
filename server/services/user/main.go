@@ -7,12 +7,12 @@ import (
 	"github.com/gin-gonic/gin"
 	"google.golang.org/grpc"
 
-	userv1 "aqua/gen/go/aqua/user/v1"
-	"aqua/pkg/infra/bootstrap"
-	"aqua/pkg/rbac"
-	"aqua/pkg/transport/gateway"
-	"aqua/services/user/grpcserver"
-	"aqua/services/user/logic"
+	userv1 "github.com/ipuppet/aqua/server/gen/go/aqua/user/v1"
+	"github.com/ipuppet/aqua/server/pkg/infra/bootstrap"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/pkg/transport/gateway"
+	"github.com/ipuppet/aqua/server/services/user/grpcserver"
+	"github.com/ipuppet/aqua/server/services/user/logic"
 )
 
 const ServiceName = "user"

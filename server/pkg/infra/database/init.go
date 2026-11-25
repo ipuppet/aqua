@@ -9,7 +9,7 @@ import (
 
 	_ "github.com/lib/pq"
 
-	"aqua/pkg/infra/models"
+	"github.com/ipuppet/aqua/server/pkg/infra/models"
 )
 
 const (

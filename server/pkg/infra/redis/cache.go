@@ -8,7 +8,7 @@ import (
 
 	"github.com/redis/go-redis/v9"
 
-	"aqua/pkg/infra/cache"
+	"github.com/ipuppet/aqua/server/pkg/infra/cache"
 )
 
 // RedisCache implements cache.Store using Redis

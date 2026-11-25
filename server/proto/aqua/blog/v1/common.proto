@@ -5,7 +5,7 @@ package aqua.blog.v1;
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
 
-option go_package = "aqua/gen/go/aqua/blog/v1;blogv1";
+option go_package = "github.com/ipuppet/aqua/server/gen/go/aqua/blog/v1;blogv1";
 
 message Tag {
   int32 id = 1;

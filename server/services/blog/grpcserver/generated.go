@@ -4,9 +4,9 @@
 package grpcserver
 
 import (
-	v1 "aqua/gen/go/aqua/blog/v1"
-	convert "aqua/pkg/utils/convert"
-	domain "aqua/services/blog/domain"
+	v1 "github.com/ipuppet/aqua/server/gen/go/aqua/blog/v1"
+	convert "github.com/ipuppet/aqua/server/pkg/utils/convert"
+	domain "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 func init() {

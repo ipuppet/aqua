@@ -7,13 +7,13 @@ import (
 	"github.com/gin-gonic/gin"
 	"google.golang.org/grpc"
 
-	blogv1 "aqua/gen/go/aqua/blog/v1"
-	"aqua/pkg/infra/bootstrap"
-	"aqua/pkg/rbac"
-	"aqua/pkg/transport/gateway"
-	"aqua/services/blog/grpcserver"
-	"aqua/services/blog/logic"
-	blogmeili "aqua/services/blog/meili"
+	blogv1 "github.com/ipuppet/aqua/server/gen/go/aqua/blog/v1"
+	"github.com/ipuppet/aqua/server/pkg/infra/bootstrap"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/pkg/transport/gateway"
+	"github.com/ipuppet/aqua/server/services/blog/grpcserver"
+	"github.com/ipuppet/aqua/server/services/blog/logic"
+	blogmeili "github.com/ipuppet/aqua/server/services/blog/meili"
 )
 
 const ServiceName = "blog"

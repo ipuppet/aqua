@@ -3,11 +3,11 @@ package grpcserver
 import (
 	"context"
 
-	blogv1 "aqua/gen/go/aqua/blog/v1"
-	"aqua/pkg/apperr"
-	"aqua/pkg/transport/authctx"
-	blog "aqua/services/blog/domain"
-	"aqua/services/blog/logic"
+	blogv1 "github.com/ipuppet/aqua/server/gen/go/aqua/blog/v1"
+	"github.com/ipuppet/aqua/server/pkg/apperr"
+	"github.com/ipuppet/aqua/server/pkg/transport/authctx"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
+	"github.com/ipuppet/aqua/server/services/blog/logic"
 )
 
 type CommentServer struct {

@@ -7,8 +7,8 @@
 package __SERVICE__
 
 import (
-	"aqua/pkg/infra/bootstrap"
-	"aqua/services/__SERVICE__/logic"
+	"github.com/ipuppet/aqua/server/pkg/infra/bootstrap"
+	"github.com/ipuppet/aqua/server/services/__SERVICE__/logic"
 )
 
 // Injectors from wire.go:

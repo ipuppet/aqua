@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log/slog"
 
-	"aqua/pkg/infra/config"
-	"aqua/services/admin/types"
+	"github.com/ipuppet/aqua/server/pkg/infra/config"
+	"github.com/ipuppet/aqua/server/services/admin/types"
 )
 
 // FileConfigProvider loads file-store settings for admin uploads.

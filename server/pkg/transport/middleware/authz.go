@@ -6,10 +6,10 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"aqua/pkg/apperr"
-	"aqua/pkg/rbac"
-	"aqua/pkg/transport/authctx"
-	"aqua/pkg/transport/response"
+	"github.com/ipuppet/aqua/server/pkg/apperr"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/pkg/transport/authctx"
+	"github.com/ipuppet/aqua/server/pkg/transport/response"
 )
 
 const allPermissionCode = "ALL"

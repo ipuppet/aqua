@@ -3,9 +3,9 @@ package bootstrap
 import (
 	"github.com/google/wire"
 
-	"aqua/pkg/infra/config"
-	"aqua/pkg/infra/filestore"
-	"aqua/pkg/infra/models"
+	"github.com/ipuppet/aqua/server/pkg/infra/config"
+	"github.com/ipuppet/aqua/server/pkg/infra/filestore"
+	"github.com/ipuppet/aqua/server/pkg/infra/models"
 )
 
 // RuntimeBaseSet exports common runtime dependencies from Runtime.

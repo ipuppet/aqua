@@ -6,14 +6,14 @@ import (
 	"testing"
 	"time"
 
-	"aqua/pkg/transport/token"
-	authdomain "aqua/services/passport/domain"
+	"github.com/ipuppet/aqua/server/pkg/transport/token"
+	authdomain "github.com/ipuppet/aqua/server/services/passport/domain"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"golang.org/x/crypto/bcrypt"
 
-	"aqua/pkg/infra/logutil"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
 )
 
 func TestVerifyAndRefreshToken_DoesNotWriteLoginAudit(t *testing.T) {

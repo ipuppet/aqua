@@ -7,7 +7,7 @@ import (
 	"log/slog"
 	"time"
 
-	blog "aqua/services/blog/domain"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 func (s *ManagementService) UpdateAbout(ctx context.Context, content string) error {

@@ -3,9 +3,9 @@ package logic
 //go:generate go tool goverter gen .
 
 import (
-	"aqua/pkg/rbac"
-	"aqua/pkg/types"
-	user "aqua/services/user/domain"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/pkg/types"
+	user "github.com/ipuppet/aqua/server/services/user/domain"
 )
 
 func nullStringToString(value types.NullString) string {

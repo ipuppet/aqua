@@ -5,8 +5,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"aqua/pkg/rbac"
-	"aqua/pkg/transport/middleware"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/pkg/transport/middleware"
 )
 
 func registerGatewayRoutes(engine *gin.Engine, publicKey *rsa.PublicKey, rbacReader rbac.Reader, gatewayHandler gin.HandlerFunc) {

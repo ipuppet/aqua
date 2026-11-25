@@ -6,11 +6,11 @@ import (
 	"github.com/gin-gonic/gin"
 	"google.golang.org/grpc"
 
-	__SERVICE__v1 "aqua/gen/go/aqua/__SERVICE__/v1"
-	"aqua/pkg/infra/bootstrap"
-	"aqua/pkg/transport/gateway"
-	"aqua/services/__SERVICE__/grpcserver"
-	"aqua/services/__SERVICE__/logic"
+	__SERVICE__v1 "github.com/ipuppet/aqua/server/gen/go/aqua/__SERVICE__/v1"
+	"github.com/ipuppet/aqua/server/pkg/infra/bootstrap"
+	"github.com/ipuppet/aqua/server/pkg/transport/gateway"
+	"github.com/ipuppet/aqua/server/services/__SERVICE__/grpcserver"
+	"github.com/ipuppet/aqua/server/services/__SERVICE__/logic"
 )
 
 const ServiceName = "__SERVICE__"

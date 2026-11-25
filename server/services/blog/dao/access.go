@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
-	"aqua/pkg/infra/database"
-	blog "aqua/services/blog/domain"
-	"aqua/services/blog/internal/netutil"
+	"github.com/ipuppet/aqua/server/pkg/infra/database"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
+	"github.com/ipuppet/aqua/server/services/blog/internal/netutil"
 )
 
 // LogAccessInfo records an article access with IPv4/IPv6 support.

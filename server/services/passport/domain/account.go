@@ -3,7 +3,7 @@ package auth
 import (
 	"time"
 
-	"aqua/pkg/types"
+	"github.com/ipuppet/aqua/server/pkg/types"
 )
 
 // AccountColumns is the rbac_user column list used by passport auth persistence.

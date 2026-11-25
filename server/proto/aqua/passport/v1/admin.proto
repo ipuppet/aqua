@@ -5,7 +5,7 @@ package aqua.passport.v1;
 import "google/api/annotations.proto";
 import "google/protobuf/timestamp.proto";
 
-option go_package = "aqua/gen/go/aqua/passport/v1;passportv1";
+option go_package = "github.com/ipuppet/aqua/server/gen/go/aqua/passport/v1;passportv1";
 
 service AdminPassportService {
   rpc ListUserSessions(ListUserSessionsRequest) returns (ListUserSessionsResponse) {

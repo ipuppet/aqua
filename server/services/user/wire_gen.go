@@ -7,14 +7,14 @@
 package user
 
 import (
-	"aqua/pkg/infra/bootstrap"
-	"aqua/pkg/infra/config"
-	"aqua/pkg/infra/database"
-	"aqua/pkg/infra/redis"
-	"aqua/pkg/rbac"
-	"aqua/pkg/transport/token"
-	"aqua/services/user/dao"
-	"aqua/services/user/logic"
+	"github.com/ipuppet/aqua/server/pkg/infra/bootstrap"
+	"github.com/ipuppet/aqua/server/pkg/infra/config"
+	"github.com/ipuppet/aqua/server/pkg/infra/database"
+	"github.com/ipuppet/aqua/server/pkg/infra/redis"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/pkg/transport/token"
+	"github.com/ipuppet/aqua/server/services/user/dao"
+	"github.com/ipuppet/aqua/server/services/user/logic"
 )
 
 // Injectors from wire.go:

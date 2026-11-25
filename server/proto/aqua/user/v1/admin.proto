@@ -5,7 +5,7 @@ package aqua.user.v1;
 import "aqua/user/v1/common.proto";
 import "google/api/annotations.proto";
 
-option go_package = "aqua/gen/go/aqua/user/v1;userv1";
+option go_package = "github.com/ipuppet/aqua/server/gen/go/aqua/user/v1;userv1";
 
 service AdminUserService {
   rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {

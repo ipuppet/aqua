@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"time"
 
-	"aqua/pkg/infra/database"
-	blog "aqua/services/blog/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/database"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 func (r *repository) GetComments(ctx context.Context, aid int, offset int, limit int) ([]blog.Comment, error) {

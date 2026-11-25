@@ -3,8 +3,8 @@ package grpcserver
 import (
 	"context"
 
-	__SERVICE__v1 "aqua/gen/go/aqua/__SERVICE__/v1"
-	"aqua/services/__SERVICE__/logic"
+	__SERVICE__v1 "github.com/ipuppet/aqua/server/gen/go/aqua/__SERVICE__/v1"
+	"github.com/ipuppet/aqua/server/services/__SERVICE__/logic"
 )
 
 type __Service__Server struct {

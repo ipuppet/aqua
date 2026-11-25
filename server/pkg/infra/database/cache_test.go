@@ -9,7 +9,7 @@ import (
 	"github.com/go-redis/redismock/v9"
 	"github.com/stretchr/testify/assert"
 
-	"aqua/pkg/infra/redis"
+	"github.com/ipuppet/aqua/server/pkg/infra/redis"
 )
 
 func TestFetchWithCache(t *testing.T) {

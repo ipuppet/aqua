@@ -26,7 +26,7 @@ while IFS= read -r line; do
   rest="${rest#*:}"
 
   file_service="$(echo "$file_path" | sed -E 's#^services/([^/]+)/.*#\1#')"
-  import_service="$(echo "$rest" | sed -E 's#.*aqua/services/([^/"]+).*#\1#')"
+  import_service="$(echo "$rest" | sed -E 's#.*github.com/ipuppet/aqua/server/services/([^/"]+).*#\1#')"
 
   if [[ -z "$file_service" || -z "$import_service" ]]; then
     continue
@@ -40,7 +40,7 @@ while IFS= read -r line; do
   if [[ "$file_service" != "$import_service" ]]; then
     violations+="$line"$'\n'
   fi
-done < <(rg -n 'aqua/services/[^/"]+' "$SEARCH_ROOT" --glob '*.go' || true)
+done < <(rg -n 'github.com/ipuppet/aqua/server/services/[^/"]+' "$SEARCH_ROOT" --glob '*.go' || true)
 
 if [[ -n "$violations" ]]; then
   echo "service import boundary violations detected:"

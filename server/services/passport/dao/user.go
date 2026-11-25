@@ -7,10 +7,10 @@ import (
 	"regexp"
 	"time"
 
-	"aqua/pkg/infra/database"
-	"aqua/pkg/rbac"
-	auth "aqua/services/passport/domain"
-	"aqua/services/passport/internal/regex"
+	"github.com/ipuppet/aqua/server/pkg/infra/database"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	auth "github.com/ipuppet/aqua/server/services/passport/domain"
+	"github.com/ipuppet/aqua/server/services/passport/internal/regex"
 )
 
 const userInfoTTL = 24 * time.Hour

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	blog "aqua/services/blog/domain"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 // executeInTransaction runs callback within a transaction respecting context cancellation.

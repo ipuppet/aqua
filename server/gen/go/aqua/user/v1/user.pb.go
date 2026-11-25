@@ -402,7 +402,7 @@ const file_aqua_user_v1_user_proto_rawDesc = "" +
 	"\n" +
 	"UpdateSelf\x12\x1f.aqua.user.v1.UpdateSelfRequest\x1a .aqua.user.v1.UpdateSelfResponse\"\x18\x82\xd3\xe4\x93\x02\x12:\x01*\x1a\r/api/users/me\x12b\n" +
 	"\aGetMenu\x12\x1c.aqua.user.v1.GetMenuRequest\x1a\x1d.aqua.user.v1.GetMenuResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/api/users/me/menu\x12v\n" +
-	"\fGetStructure\x12!.aqua.user.v1.GetStructureRequest\x1a\".aqua.user.v1.GetStructureResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/users/me/structureB!Z\x1faqua/gen/go/aqua/user/v1;userv1b\x06proto3"
+	"\fGetStructure\x12!.aqua.user.v1.GetStructureRequest\x1a\".aqua.user.v1.GetStructureResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/users/me/structureB;Z9github.com/ipuppet/aqua/server/gen/go/aqua/user/v1;userv1b\x06proto3"
 
 var (
 	file_aqua_user_v1_user_proto_rawDescOnce sync.Once

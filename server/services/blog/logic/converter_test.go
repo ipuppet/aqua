@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"aqua/pkg/types"
-	blog "aqua/services/blog/domain"
+	"github.com/ipuppet/aqua/server/pkg/types"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 func TestToAccessResponseKeepsTimestamp(t *testing.T) {

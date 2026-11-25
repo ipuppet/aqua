@@ -11,8 +11,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
 
-	"aqua/pkg/transport/authctx"
-	"aqua/pkg/transport/token"
+	"github.com/ipuppet/aqua/server/pkg/transport/authctx"
+	"github.com/ipuppet/aqua/server/pkg/transport/token"
 )
 
 func TestAuthenticate_UnauthorizedWithoutBearer(t *testing.T) {

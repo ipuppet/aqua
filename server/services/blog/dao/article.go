@@ -5,8 +5,8 @@ import (
 	"database/sql"
 	"fmt"
 
-	"aqua/pkg/infra/database"
-	blog "aqua/services/blog/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/database"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 // CreateArticle creates a new article with tags.

@@ -4,10 +4,10 @@ import (
 	"context"
 	"time"
 
-	"aqua/pkg/infra/cache"
-	"aqua/pkg/rbac"
-	"aqua/services/user/dao"
-	user "aqua/services/user/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/cache"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/services/user/dao"
+	user "github.com/ipuppet/aqua/server/services/user/domain"
 )
 
 var _ dao.UserRepository = (*userRepoStub)(nil)

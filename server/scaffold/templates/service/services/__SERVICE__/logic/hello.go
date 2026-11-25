@@ -6,7 +6,7 @@ import (
 	"log/slog"
 	"strings"
 
-	"aqua/services/__SERVICE__/domain"
+	"github.com/ipuppet/aqua/server/services/__SERVICE__/domain"
 )
 
 type HelloService struct {

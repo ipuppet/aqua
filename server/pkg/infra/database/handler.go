@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"time"
 
-	"aqua/pkg/infra/cache"
+	"github.com/ipuppet/aqua/server/pkg/infra/cache"
 )
 
 var errCacheEmpty = errors.New("cache empty")

@@ -13,8 +13,8 @@ import (
 	"sync"
 	"time"
 
-	"aqua/pkg/transport/client"
-	"aqua/services/admin/types"
+	"github.com/ipuppet/aqua/server/pkg/transport/client"
+	"github.com/ipuppet/aqua/server/services/admin/types"
 )
 
 // -----------------------------------------------------------------------------

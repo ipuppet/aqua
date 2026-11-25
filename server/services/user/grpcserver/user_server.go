@@ -5,11 +5,11 @@ import (
 
 	"google.golang.org/protobuf/types/known/structpb"
 
-	userv1 "aqua/gen/go/aqua/user/v1"
-	"aqua/pkg/apperr"
-	"aqua/pkg/transport/authctx"
-	user "aqua/services/user/domain"
-	"aqua/services/user/logic"
+	userv1 "github.com/ipuppet/aqua/server/gen/go/aqua/user/v1"
+	"github.com/ipuppet/aqua/server/pkg/apperr"
+	"github.com/ipuppet/aqua/server/pkg/transport/authctx"
+	user "github.com/ipuppet/aqua/server/services/user/domain"
+	"github.com/ipuppet/aqua/server/services/user/logic"
 )
 
 type UserServer struct {

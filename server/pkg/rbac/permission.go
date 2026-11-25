@@ -1,6 +1,6 @@
 package rbac
 
-import "aqua/pkg/types"
+import "github.com/ipuppet/aqua/server/pkg/types"
 
 // Permission is the shared permission record used by the RBAC reader and user-service persistence.
 type Permission struct {

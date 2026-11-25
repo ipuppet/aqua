@@ -7,7 +7,7 @@ import (
 	"github.com/google/uuid"
 	"go.opentelemetry.io/otel/trace"
 
-	"aqua/pkg/infra/logutil"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
 )
 
 // LoggerMiddleware attaches a request scoped logger enriched with trace information.

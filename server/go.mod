@@ -1,4 +1,4 @@
-module aqua
+module github.com/ipuppet/aqua/server
 
 go 1.27.3
 

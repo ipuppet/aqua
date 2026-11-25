@@ -6,14 +6,14 @@ package blog
 import (
 	"github.com/google/wire"
 
-	"aqua/pkg/infra/bootstrap"
-	"aqua/pkg/infra/config"
-	"aqua/pkg/infra/persist"
-	"aqua/pkg/rbac"
-	"aqua/pkg/transport/token"
-	"aqua/services/blog/dao"
-	"aqua/services/blog/logic"
-	"aqua/services/blog/meili"
+	"github.com/ipuppet/aqua/server/pkg/infra/bootstrap"
+	"github.com/ipuppet/aqua/server/pkg/infra/config"
+	"github.com/ipuppet/aqua/server/pkg/infra/persist"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/pkg/transport/token"
+	"github.com/ipuppet/aqua/server/services/blog/dao"
+	"github.com/ipuppet/aqua/server/services/blog/logic"
+	"github.com/ipuppet/aqua/server/services/blog/meili"
 )
 
 // buildModule assembles service module.

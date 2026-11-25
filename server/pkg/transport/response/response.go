@@ -8,7 +8,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"aqua/pkg/apperr"
+	"github.com/ipuppet/aqua/server/pkg/apperr"
 )
 
 type errorPayload struct {

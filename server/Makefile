@@ -153,7 +153,7 @@ fmt.go:
 		-not -path '*/gen/*' \
 		-not -name '*_gen.go' \
 		-not -name 'generated.go' \
-		-exec goimports -w -local aqua {} +
+		-exec goimports -w -local github.com/ipuppet/aqua/server {} +
 
 fmt.proto:
 ifeq ($(HAS_PROTO),0)

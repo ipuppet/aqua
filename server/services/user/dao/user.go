@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"time"
 
-	"aqua/pkg/infra/database"
-	"aqua/pkg/rbac"
-	user "aqua/services/user/domain"
-	schemauser "aqua/services/user/domain/schema"
+	"github.com/ipuppet/aqua/server/pkg/infra/database"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	user "github.com/ipuppet/aqua/server/services/user/domain"
+	schemauser "github.com/ipuppet/aqua/server/services/user/domain/schema"
 )
 
 const userInfoTTL = 24 * time.Hour

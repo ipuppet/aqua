@@ -7,15 +7,15 @@
 package blog
 
 import (
-	"aqua/pkg/infra/bootstrap"
-	"aqua/pkg/infra/config"
-	"aqua/pkg/infra/database"
-	"aqua/pkg/infra/redis"
-	"aqua/pkg/rbac"
-	"aqua/pkg/transport/token"
-	"aqua/services/blog/dao"
-	"aqua/services/blog/logic"
-	"aqua/services/blog/meili"
+	"github.com/ipuppet/aqua/server/pkg/infra/bootstrap"
+	"github.com/ipuppet/aqua/server/pkg/infra/config"
+	"github.com/ipuppet/aqua/server/pkg/infra/database"
+	"github.com/ipuppet/aqua/server/pkg/infra/redis"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/pkg/transport/token"
+	"github.com/ipuppet/aqua/server/services/blog/dao"
+	"github.com/ipuppet/aqua/server/services/blog/logic"
+	"github.com/ipuppet/aqua/server/services/blog/meili"
 )
 
 // Injectors from wire.go:

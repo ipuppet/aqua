@@ -9,8 +9,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"aqua/pkg/infra/logutil"
-	user "aqua/services/user/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	user "github.com/ipuppet/aqua/server/services/user/domain"
 )
 
 func TestGetUserInfo(t *testing.T) {

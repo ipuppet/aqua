@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"aqua/pkg/infra/logutil"
-	"aqua/pkg/infra/models"
-	auth "aqua/services/passport/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	"github.com/ipuppet/aqua/server/pkg/infra/models"
+	auth "github.com/ipuppet/aqua/server/services/passport/domain"
 )
 
 func TestRegisterUser(t *testing.T) {

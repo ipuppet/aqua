@@ -3,10 +3,10 @@ package grpcserver
 import (
 	"context"
 
-	blogv1 "aqua/gen/go/aqua/blog/v1"
-	"aqua/pkg/apperr"
-	blog "aqua/services/blog/domain"
-	"aqua/services/blog/logic"
+	blogv1 "github.com/ipuppet/aqua/server/gen/go/aqua/blog/v1"
+	"github.com/ipuppet/aqua/server/pkg/apperr"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
+	"github.com/ipuppet/aqua/server/services/blog/logic"
 )
 
 // AdminServer provides gRPC APIs for admin-side blog operations.

@@ -9,12 +9,12 @@ import (
 
 	"google.golang.org/grpc/metadata"
 
-	passportv1 "aqua/gen/go/aqua/passport/v1"
-	"aqua/pkg/apperr"
-	"aqua/pkg/transport/authctx"
-	"aqua/pkg/types"
-	authdomain "aqua/services/passport/domain"
-	"aqua/services/passport/logic"
+	passportv1 "github.com/ipuppet/aqua/server/gen/go/aqua/passport/v1"
+	"github.com/ipuppet/aqua/server/pkg/apperr"
+	"github.com/ipuppet/aqua/server/pkg/transport/authctx"
+	"github.com/ipuppet/aqua/server/pkg/types"
+	authdomain "github.com/ipuppet/aqua/server/services/passport/domain"
+	"github.com/ipuppet/aqua/server/services/passport/logic"
 )
 
 var usernamePattern = regexp.MustCompile(`^[a-zA-Z0-9]+$`)

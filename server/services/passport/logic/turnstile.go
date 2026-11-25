@@ -10,8 +10,8 @@ import (
 	"net/url"
 	"time"
 
-	"aqua/pkg/infra/models"
-	"aqua/pkg/transport/client"
+	"github.com/ipuppet/aqua/server/pkg/infra/models"
+	"github.com/ipuppet/aqua/server/pkg/transport/client"
 )
 
 // verifyTurnstileToken validates the provided token against Cloudflare's endpoint.

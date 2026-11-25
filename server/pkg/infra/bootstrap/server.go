@@ -17,12 +17,12 @@ import (
 	"golang.org/x/sync/errgroup"
 	"google.golang.org/grpc"
 
-	"aqua/pkg/infra/config"
-	"aqua/pkg/infra/logutil"
-	"aqua/pkg/infra/models"
-	"aqua/pkg/infra/telemetry"
-	"aqua/pkg/transport/grpcx"
-	"aqua/pkg/transport/middleware"
+	"github.com/ipuppet/aqua/server/pkg/infra/config"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	"github.com/ipuppet/aqua/server/pkg/infra/models"
+	"github.com/ipuppet/aqua/server/pkg/infra/telemetry"
+	"github.com/ipuppet/aqua/server/pkg/transport/grpcx"
+	"github.com/ipuppet/aqua/server/pkg/transport/middleware"
 )
 
 // NewGRPCServer returns a gRPC server with internal auth interceptor.

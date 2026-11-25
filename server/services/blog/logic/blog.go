@@ -5,10 +5,10 @@ import (
 	"log/slog"
 	"time"
 
-	"aqua/pkg/infra/logutil"
-	"aqua/services/blog/dao"
-	blog "aqua/services/blog/domain"
-	"aqua/services/blog/meili"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	"github.com/ipuppet/aqua/server/services/blog/dao"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
+	"github.com/ipuppet/aqua/server/services/blog/meili"
 )
 
 const accessLogTimeout = 5 * time.Second

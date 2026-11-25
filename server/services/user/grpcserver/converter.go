@@ -3,8 +3,8 @@ package grpcserver
 //go:generate go tool goverter gen .
 
 import (
-	userv1 "aqua/gen/go/aqua/user/v1"
-	user "aqua/services/user/domain"
+	userv1 "github.com/ipuppet/aqua/server/gen/go/aqua/user/v1"
+	user "github.com/ipuppet/aqua/server/services/user/domain"
 )
 
 // goverter:variables

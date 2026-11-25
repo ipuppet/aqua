@@ -3,7 +3,7 @@ package blog
 import (
 	"time"
 
-	"aqua/pkg/types"
+	"github.com/ipuppet/aqua/server/pkg/types"
 )
 
 // AccessResponse represents the API response structure for an access log record.

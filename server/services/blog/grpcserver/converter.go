@@ -3,8 +3,8 @@ package grpcserver
 //go:generate go tool goverter gen .
 
 import (
-	blogv1 "aqua/gen/go/aqua/blog/v1"
-	blog "aqua/services/blog/domain"
+	blogv1 "github.com/ipuppet/aqua/server/gen/go/aqua/blog/v1"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 // goverter:variables

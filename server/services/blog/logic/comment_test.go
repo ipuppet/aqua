@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"aqua/pkg/infra/logutil"
-	blog "aqua/services/blog/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 func TestGetComments(t *testing.T) {

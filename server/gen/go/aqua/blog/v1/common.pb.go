@@ -1857,7 +1857,7 @@ const file_aqua_blog_v1_common_proto_rawDesc = "" +
 	"\arecords\x18\x01 \x03(\v2\x1a.aqua.blog.v1.AccessRecordR\arecords\"\x12\n" +
 	"\x10SyncMeiliRequest\"8\n" +
 	"\x11SyncMeiliResponse\x12#\n" +
-	"\rtotal_indexed\x18\x01 \x01(\x05R\ftotalIndexedB!Z\x1faqua/gen/go/aqua/blog/v1;blogv1b\x06proto3"
+	"\rtotal_indexed\x18\x01 \x01(\x05R\ftotalIndexedB;Z9github.com/ipuppet/aqua/server/gen/go/aqua/blog/v1;blogv1b\x06proto3"
 
 var (
 	file_aqua_blog_v1_common_proto_rawDescOnce sync.Once

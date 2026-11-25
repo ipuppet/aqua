@@ -6,7 +6,7 @@ import "aqua/user/v1/common.proto";
 import "google/api/annotations.proto";
 import "google/protobuf/struct.proto";
 
-option go_package = "aqua/gen/go/aqua/user/v1;userv1";
+option go_package = "github.com/ipuppet/aqua/server/gen/go/aqua/user/v1;userv1";
 
 service UserService {
   rpc GetUserInfo(GetUserInfoRequest) returns (User) {

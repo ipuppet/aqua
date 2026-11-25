@@ -3,9 +3,9 @@ package dao
 import (
 	"context"
 
-	"aqua/pkg/infra/cache"
-	"aqua/pkg/infra/database"
-	blog "aqua/services/blog/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/cache"
+	"github.com/ipuppet/aqua/server/pkg/infra/database"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 // ArticleRepository exposes read-side article operations.

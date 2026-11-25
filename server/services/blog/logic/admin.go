@@ -4,9 +4,9 @@ import (
 	"context"
 	"log/slog"
 
-	"aqua/pkg/infra/logutil"
-	"aqua/services/blog/dao"
-	"aqua/services/blog/meili"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	"github.com/ipuppet/aqua/server/services/blog/dao"
+	"github.com/ipuppet/aqua/server/services/blog/meili"
 )
 
 // ManagementService is the logic implementation.

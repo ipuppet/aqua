@@ -436,7 +436,7 @@ const file_aqua_blog_v1_comment_proto_rawDesc = "" +
 	"\fListComments\x12!.aqua.blog.v1.ListCommentsRequest\x1a\".aqua.blog.v1.ListCommentsResponse\"$\x82\xd3\xe4\x93\x02\x1e\x12\x1c/api/comments/articles/{aid}\x12\x84\x01\n" +
 	"\x11ListChildComments\x12&.aqua.blog.v1.ListChildCommentsRequest\x1a\".aqua.blog.v1.ListCommentsResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/api/comments/{id}/children\x12x\n" +
 	"\n" +
-	"AddComment\x12\x1f.aqua.blog.v1.AddCommentRequest\x1a .aqua.blog.v1.AddCommentResponse\"'\x82\xd3\xe4\x93\x02!:\x01*\"\x1c/api/comments/articles/{aid}B!Z\x1faqua/gen/go/aqua/blog/v1;blogv1b\x06proto3"
+	"AddComment\x12\x1f.aqua.blog.v1.AddCommentRequest\x1a .aqua.blog.v1.AddCommentResponse\"'\x82\xd3\xe4\x93\x02!:\x01*\"\x1c/api/comments/articles/{aid}B;Z9github.com/ipuppet/aqua/server/gen/go/aqua/blog/v1;blogv1b\x06proto3"
 
 var (
 	file_aqua_blog_v1_comment_proto_rawDescOnce sync.Once

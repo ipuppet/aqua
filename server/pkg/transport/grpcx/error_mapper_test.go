@@ -7,7 +7,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"aqua/pkg/apperr"
+	"github.com/ipuppet/aqua/server/pkg/apperr"
 )
 
 func TestMapError_MapsDomainErrorToGRPCStatus(t *testing.T) {

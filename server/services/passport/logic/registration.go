@@ -7,12 +7,12 @@ import (
 
 	"golang.org/x/crypto/bcrypt"
 
-	"aqua/pkg/infra/config"
-	"aqua/pkg/infra/email"
-	"aqua/pkg/infra/logutil"
-	"aqua/pkg/infra/models"
-	"aqua/services/passport/dao"
-	auth "aqua/services/passport/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/config"
+	"github.com/ipuppet/aqua/server/pkg/infra/email"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	"github.com/ipuppet/aqua/server/pkg/infra/models"
+	"github.com/ipuppet/aqua/server/services/passport/dao"
+	auth "github.com/ipuppet/aqua/server/services/passport/domain"
 )
 
 type RegistrationService struct {

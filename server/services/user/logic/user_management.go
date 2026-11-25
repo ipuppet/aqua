@@ -4,11 +4,11 @@ import (
 	"context"
 	"log/slog"
 
-	"aqua/pkg/infra/logutil"
-	"aqua/pkg/rbac"
-	"aqua/pkg/transport/token"
-	"aqua/services/user/dao"
-	user "aqua/services/user/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/pkg/transport/token"
+	"github.com/ipuppet/aqua/server/services/user/dao"
+	user "github.com/ipuppet/aqua/server/services/user/domain"
 )
 
 type UserManagementService struct {

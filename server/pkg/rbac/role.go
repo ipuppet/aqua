@@ -5,7 +5,7 @@
 // Cross-service identity on a request is authctx.TokenUser, not these records.
 package rbac
 
-import "aqua/pkg/types"
+import "github.com/ipuppet/aqua/server/pkg/types"
 
 // Role is the shared role record used by the RBAC reader and user-service persistence.
 type Role struct {

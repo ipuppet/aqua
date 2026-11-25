@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"aqua/pkg/infra/cache"
+	"github.com/ipuppet/aqua/server/pkg/infra/cache"
 )
 
 func TestCacheRepository_FlushPreservesRefreshTokens(t *testing.T) {

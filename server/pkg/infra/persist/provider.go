@@ -4,8 +4,8 @@ package persist
 import (
 	"github.com/google/wire"
 
-	"aqua/pkg/infra/database"
-	"aqua/pkg/infra/redis"
+	"github.com/ipuppet/aqua/server/pkg/infra/database"
+	"github.com/ipuppet/aqua/server/pkg/infra/redis"
 )
 
 // Set provides database and redis for persistence-backed services.

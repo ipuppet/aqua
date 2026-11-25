@@ -854,7 +854,7 @@ const file_aqua_passport_v1_passport_proto_rawDesc = "" +
 	"\x0eForgotPassword\x12'.aqua.passport.v1.ForgotPasswordRequest\x1a(.aqua.passport.v1.ForgotPasswordResponse\"\x1f\x82\xd3\xe4\x93\x02\x19:\x01*\"\x14/api/password/forgot\x12\x80\x01\n" +
 	"\rResetPassword\x12&.aqua.passport.v1.ResetPasswordRequest\x1a'.aqua.passport.v1.ResetPasswordResponse\"\x1e\x82\xd3\xe4\x93\x02\x18:\x01*\"\x13/api/password/reset\x12z\n" +
 	"\x0eListMySessions\x12'.aqua.passport.v1.ListMySessionsRequest\x1a(.aqua.passport.v1.ListMySessionsResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/api/sessions\x12\x8a\x01\n" +
-	"\x0fRevokeMySession\x12(.aqua.passport.v1.RevokeMySessionRequest\x1a).aqua.passport.v1.RevokeMySessionResponse\"\"\x82\xd3\xe4\x93\x02\x1c*\x1a/api/sessions/{session_id}B)Z'aqua/gen/go/aqua/passport/v1;passportv1b\x06proto3"
+	"\x0fRevokeMySession\x12(.aqua.passport.v1.RevokeMySessionRequest\x1a).aqua.passport.v1.RevokeMySessionResponse\"\"\x82\xd3\xe4\x93\x02\x1c*\x1a/api/sessions/{session_id}BCZAgithub.com/ipuppet/aqua/server/gen/go/aqua/passport/v1;passportv1b\x06proto3"
 
 var (
 	file_aqua_passport_v1_passport_proto_rawDescOnce sync.Once

@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"aqua/pkg/infra/cache"
+	"github.com/ipuppet/aqua/server/pkg/infra/cache"
 )
 
 type cacheRepository struct {

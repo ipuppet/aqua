@@ -3,8 +3,8 @@ package admin
 import (
 	"github.com/gin-gonic/gin"
 
-	"aqua/pkg/infra/bootstrap"
-	"aqua/services/admin/handler"
+	"github.com/ipuppet/aqua/server/pkg/infra/bootstrap"
+	"github.com/ipuppet/aqua/server/services/admin/handler"
 )
 
 const ServiceName = "admin"

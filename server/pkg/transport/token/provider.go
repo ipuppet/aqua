@@ -6,7 +6,7 @@ import (
 
 	"github.com/google/wire"
 
-	"aqua/pkg/infra/config"
+	"github.com/ipuppet/aqua/server/pkg/infra/config"
 )
 
 // PublicKeySet provides JWT public key for token verification.

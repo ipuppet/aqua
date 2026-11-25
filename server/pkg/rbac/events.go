@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	"aqua/pkg/infra/cache"
+	"github.com/ipuppet/aqua/server/pkg/infra/cache"
 )
 
 // Event is a marker interface for RBAC mutations that require cache invalidation.

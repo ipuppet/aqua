@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"aqua/pkg/infra/database"
-	user "aqua/services/user/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/database"
+	user "github.com/ipuppet/aqua/server/services/user/domain"
 )
 
 func (r *repository) SearchUsers(ctx context.Context, kw string, offset int, limit int) ([]user.UserModel, error) {

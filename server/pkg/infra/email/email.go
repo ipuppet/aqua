@@ -4,7 +4,7 @@ package email
 import (
 	"gopkg.in/gomail.v2"
 
-	"aqua/pkg/infra/models"
+	"github.com/ipuppet/aqua/server/pkg/infra/models"
 )
 
 // SendEmailWithConfig 根据传入的配置构建并发送 HTML 格式的邮件。

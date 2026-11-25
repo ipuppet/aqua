@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	auth "aqua/services/passport/domain"
+	auth "github.com/ipuppet/aqua/server/services/passport/domain"
 
 	"github.com/stretchr/testify/require"
 )

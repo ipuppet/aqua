@@ -6,8 +6,8 @@ package __SERVICE__
 import (
 	"github.com/google/wire"
 
-	"aqua/pkg/infra/bootstrap"
-	"aqua/services/__SERVICE__/logic"
+	"github.com/ipuppet/aqua/server/pkg/infra/bootstrap"
+	"github.com/ipuppet/aqua/server/services/__SERVICE__/logic"
 )
 
 // buildModule assembles service module.

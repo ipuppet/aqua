@@ -8,8 +8,8 @@ import (
 	"net"
 	"time"
 
-	"aqua/pkg/infra/models"
-	"aqua/pkg/infra/registry"
+	"github.com/ipuppet/aqua/server/pkg/infra/models"
+	"github.com/ipuppet/aqua/server/pkg/infra/registry"
 )
 
 // RegisterService registers the gRPC service into etcd with the gRPC listen address.

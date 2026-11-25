@@ -13,13 +13,13 @@ import (
 
 	"golang.org/x/crypto/bcrypt"
 
-	"aqua/pkg/infra/config"
-	"aqua/pkg/infra/email"
-	"aqua/pkg/infra/filestore"
-	"aqua/pkg/infra/logutil"
-	"aqua/pkg/infra/models"
-	"aqua/pkg/transport/token"
-	"aqua/services/passport/dao"
+	"github.com/ipuppet/aqua/server/pkg/infra/config"
+	"github.com/ipuppet/aqua/server/pkg/infra/email"
+	"github.com/ipuppet/aqua/server/pkg/infra/filestore"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	"github.com/ipuppet/aqua/server/pkg/infra/models"
+	"github.com/ipuppet/aqua/server/pkg/transport/token"
+	"github.com/ipuppet/aqua/server/services/passport/dao"
 )
 
 type PasswordResetService struct {

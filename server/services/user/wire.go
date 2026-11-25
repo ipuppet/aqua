@@ -6,12 +6,12 @@ package user
 import (
 	"github.com/google/wire"
 
-	"aqua/pkg/infra/bootstrap"
-	"aqua/pkg/infra/persist"
-	"aqua/pkg/rbac"
-	"aqua/pkg/transport/token"
-	"aqua/services/user/dao"
-	"aqua/services/user/logic"
+	"github.com/ipuppet/aqua/server/pkg/infra/bootstrap"
+	"github.com/ipuppet/aqua/server/pkg/infra/persist"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/pkg/transport/token"
+	"github.com/ipuppet/aqua/server/services/user/dao"
+	"github.com/ipuppet/aqua/server/services/user/logic"
 )
 
 // buildModule assembles service module.

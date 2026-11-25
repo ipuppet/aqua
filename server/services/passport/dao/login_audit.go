@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	auth "aqua/services/passport/domain"
+	auth "github.com/ipuppet/aqua/server/services/passport/domain"
 )
 
 // RecordLoginLog updates user last_login_at and inserts an audit record in one transaction.

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"aqua/pkg/infra/cache"
-	"aqua/services/admin/internal/imagestore"
+	"github.com/ipuppet/aqua/server/pkg/infra/cache"
+	"github.com/ipuppet/aqua/server/services/admin/internal/imagestore"
 )
 
 const (

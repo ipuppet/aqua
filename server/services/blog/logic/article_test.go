@@ -11,8 +11,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"aqua/pkg/infra/logutil"
-	blog "aqua/services/blog/domain"
+	"github.com/ipuppet/aqua/server/pkg/infra/logutil"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 // --- Tests ---

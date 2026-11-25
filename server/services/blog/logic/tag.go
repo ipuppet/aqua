@@ -4,7 +4,7 @@ import (
 	"context"
 	"log/slog"
 
-	blog "aqua/services/blog/domain"
+	blog "github.com/ipuppet/aqua/server/services/blog/domain"
 )
 
 func (s *ManagementService) CreateTag(ctx context.Context, name string) error {

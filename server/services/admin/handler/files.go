@@ -6,12 +6,12 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"aqua/pkg/apperr"
-	"aqua/pkg/rbac"
-	"aqua/pkg/transport/middleware"
-	"aqua/pkg/transport/response"
-	"aqua/services/admin/internal/httpbind"
-	"aqua/services/admin/logic"
+	"github.com/ipuppet/aqua/server/pkg/apperr"
+	"github.com/ipuppet/aqua/server/pkg/rbac"
+	"github.com/ipuppet/aqua/server/pkg/transport/middleware"
+	"github.com/ipuppet/aqua/server/pkg/transport/response"
+	"github.com/ipuppet/aqua/server/services/admin/internal/httpbind"
+	"github.com/ipuppet/aqua/server/services/admin/logic"
 )
 
 // FileHandler exposes file upload/delete APIs.

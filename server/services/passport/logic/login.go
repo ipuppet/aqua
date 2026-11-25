@@ -7,7 +7,7 @@ import (
 
 	"github.com/google/uuid"
 
-	auth "aqua/services/passport/domain"
+	auth "github.com/ipuppet/aqua/server/services/passport/domain"
 
 	"golang.org/x/crypto/bcrypt"
 )
