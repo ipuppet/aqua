@@ -10,12 +10,15 @@ Makefile
 
 # Secrets and local configuration
 secrets/
+deploy/secrets/
 .env
 .env.*
 *.pem
 *.key
 server/config/*.yaml
 !server/config/*.example.yaml
+deploy/config/*.yaml
+!deploy/config/*.example.yaml
 postgres/initdb.d/*.sql
 !postgres/initdb.d/*.sql.example
 

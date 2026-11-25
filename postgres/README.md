@@ -4,3 +4,6 @@
 - `initdb.d/0-init.sql.example` is a minimal bootstrap script for a fresh
   database. Copy it to `0-init.sql`, replace the password placeholder, and
   mount the directory into the PostgreSQL container's `docker-entrypoint-initdb.d`.
+
+See `deploy/README.md` for a Docker Compose example that creates the role and
+loads `structure/web-structure.sql` automatically on first boot.

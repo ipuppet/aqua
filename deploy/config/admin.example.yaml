@@ -1,0 +1,12 @@
+# Copy this file to deploy/config/admin.yaml before starting the example stack.
+# Replace example.com and every REPLACE_* value.
+file:
+  url_prefix: https://api.example.com/image
+  save_path: /app/server/storage/image
+  key: REPLACE_WITH_RANDOM_FILE_KEY
+  openlist:
+    enable: false
+    username: ""
+    password: ""
+    endpoint: ""
+    path_prefix: /images

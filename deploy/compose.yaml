@@ -1,0 +1,150 @@
+name: aqua
+
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  postgres:
+    image: postgres:18.6
+    restart: unless-stopped
+    logging: *default-logging
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_root
+      POSTGRES_DB: postgres
+      APP_DB_PASSWORD_FILE: /run/secrets/postgres_app
+    secrets:
+      - postgres_root
+      - postgres_app
+    volumes:
+      - postgres_data:/var/lib/postgresql
+      - ./postgres/initdb.d/00-app.sh:/docker-entrypoint-initdb.d/00-app.sh:ro
+      - ../postgres/structure/web-structure.sql:/schema/web-structure.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 20s
+
+  redis:
+    image: redis:8.6.7
+    restart: unless-stopped
+    logging: *default-logging
+    command:
+      - sh
+      - -c
+      - exec redis-server --requirepass "$$(cat /run/secrets/redis)"
+    secrets:
+      - redis
+    volumes:
+      - redis_data:/data
+
+  etcd:
+    image: quay.io/coreos/etcd:v3.5.35
+    restart: unless-stopped
+    logging: *default-logging
+    environment:
+      ETCD_NAME: aqua
+      ETCD_DATA_DIR: /etcd-data
+      ETCD_LISTEN_CLIENT_URLS: http://0.0.0.0:2379
+      ETCD_ADVERTISE_CLIENT_URLS: http://etcd:2379
+      ETCD_LISTEN_PEER_URLS: http://0.0.0.0:2380
+      ETCD_INITIAL_ADVERTISE_PEER_URLS: http://etcd:2380
+      ETCD_INITIAL_CLUSTER: aqua=http://etcd:2380
+      ETCD_INITIAL_CLUSTER_STATE: new
+    volumes:
+      - etcd_data:/etcd-data
+
+  meilisearch:
+    image: getmeili/meilisearch:v1.55.0
+    restart: unless-stopped
+    logging: *default-logging
+    environment:
+      MEILI_ENV: production
+      MEILI_NO_ANALYTICS: "true"
+    command:
+      - sh
+      - -c
+      - export MEILI_MASTER_KEY="$$(cat /run/secrets/meili)"; exec /bin/meilisearch
+    secrets:
+      - meili
+    volumes:
+      - meilisearch_data:/meili_data
+
+  api:
+    build:
+      context: ../server
+      args:
+        SERVICE: mono
+    restart: unless-stopped
+    logging: *default-logging
+    environment:
+      AQUA_CONFIG_DIR: /app/server/config
+      AQUA_STORE_DIR: /app/server/storage
+      AQUA_HTTP_ADDR: 0.0.0.0:8080
+      AQUA_GRPC_ADDR: 0.0.0.0:18080
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      etcd:
+        condition: service_started
+      meilisearch:
+        condition: service_started
+    secrets:
+      - web_jwt_private
+      - web_jwt_public
+    volumes:
+      - ./config:/app/server/config:ro
+      - storage_data:/app/server/storage
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:8080/ping >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: deploy/frontend/Dockerfile
+      args:
+        VITE_API: api.${AQUA_DOMAIN}
+        VITE_AUTH_COOKIE_DOMAIN: .${AQUA_DOMAIN}
+    restart: unless-stopped
+    logging: *default-logging
+    environment:
+      AQUA_DOMAIN: ${AQUA_DOMAIN}
+    depends_on:
+      api:
+        condition: service_started
+    ports:
+      - "${HTTP_PORT:-8080}:80"
+    volumes:
+      - storage_data:/srv/aqua:ro
+
+volumes:
+  postgres_data:
+  redis_data:
+  etcd_data:
+  meilisearch_data:
+  storage_data:
+
+secrets:
+  postgres_root:
+    file: ./secrets/postgres_root.txt
+  postgres_app:
+    file: ./secrets/postgres_app.txt
+  redis:
+    file: ./secrets/redis.txt
+  meili:
+    file: ./secrets/meili.txt
+  web_jwt_private:
+    file: ./secrets/web_jwt_private.pem
+  web_jwt_public:
+    file: ./secrets/web_jwt_public.pem

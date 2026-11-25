@@ -20,6 +20,7 @@ and administration, plus Vue 3 frontends for the public site and admin console.
 | `server/` | Go services (`admin`, `blog`, `passport`, `user`), shared packages, protobuf contracts, migrations |
 | `frontend/` | npm workspace with `apps/admin`, `apps/blog`, `apps/passport`, and shared packages |
 | `postgres/` | Database schema and an example bootstrap script |
+| `deploy/` | Single-host Docker Compose deployment example |
 
 ## Quick start
 
@@ -57,6 +58,12 @@ npm run dev:blog
 Build all apps with `npm run build:admin`, `npm run build:blog`, and
 `npm run build:passport`.
 
+## Deployment example
+
+`deploy/` contains a small Docker Compose stack with PostgreSQL, Redis, etcd,
+Meilisearch, the `mono` API, and an nginx frontend. It is a starting point, not
+a hardened production setup. See [deploy/README.md](./deploy/README.md).
+
 ## Configuration and secrets
 
 - Never commit `*.pem`, database passwords, SMTP credentials, API tokens, or
@@ -64,8 +71,8 @@ Build all apps with `npm run build:admin`, `npm run build:blog`, and
 - `server/config/*.example.yaml` and `frontend/.env*.example` are templates.
 - In production, mount secrets at `/run/secrets/` and keep real configuration
   outside the repository.
-- The private deployment repository is expected to supply compose files,
-  reverse-proxy configuration, certificates, and environment-specific values.
+- The `deploy/` example deliberately excludes TLS certificates, real domains,
+  and private services; supply those in your own deployment environment.
 
 ## Development checks
 
