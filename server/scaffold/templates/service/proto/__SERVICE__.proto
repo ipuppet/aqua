@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package aqua.__SERVICE__.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "aqua/gen/go/aqua/__SERVICE__/v1;__SERVICE__v1";
+
+// __Service__Service is the public API for the __SERVICE__ microservice.
+service __Service__Service {
+  // SayHello returns a greeting. Scaffold starter RPC — replace or extend.
+  rpc SayHello(SayHelloRequest) returns (SayHelloResponse) {
+    option (google.api.http) = {get: "/api/__SERVICE__/hello"};
+  }
+}
+
+message SayHelloRequest {
+  // Optional name; defaults to "world" when empty.
+  string name = 1;
+}
+
+message SayHelloResponse {
+  string message = 1;
+}

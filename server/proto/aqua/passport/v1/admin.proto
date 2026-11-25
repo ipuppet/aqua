@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package aqua.passport.v1;
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+
+option go_package = "aqua/gen/go/aqua/passport/v1;passportv1";
+
+service AdminPassportService {
+  rpc ListUserSessions(ListUserSessionsRequest) returns (ListUserSessionsResponse) {
+    option (google.api.http) = {get: "/api/users/{uid}/sessions"};
+  }
+  rpc RevokeUserSession(RevokeUserSessionRequest) returns (RevokeUserSessionResponse) {
+    option (google.api.http) = {delete: "/api/users/{uid}/sessions/{session_id}"};
+  }
+}
+
+message UserSession {
+  string session_id = 1;
+  int32 uid = 2;
+  string device_info = 3;
+  google.protobuf.Timestamp created_at = 4;
+}
+
+message ListUserSessionsRequest {
+  int32 uid = 1;
+}
+
+message ListUserSessionsResponse {
+  repeated UserSession sessions = 1;
+}
+
+message RevokeUserSessionRequest {
+  int32 uid = 1;
+  string session_id = 2;
+}
+
+message RevokeUserSessionResponse {}

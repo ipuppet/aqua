@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package aqua.user.v1;
+
+import "aqua/user/v1/common.proto";
+import "google/api/annotations.proto";
+import "google/protobuf/struct.proto";
+
+option go_package = "aqua/gen/go/aqua/user/v1;userv1";
+
+service UserService {
+  rpc GetUserInfo(GetUserInfoRequest) returns (User) {
+    option (google.api.http) = {get: "/api/users/{uid}"};
+  }
+  rpc GetSelf(GetSelfRequest) returns (User) {
+    option (google.api.http) = {get: "/api/users/me"};
+  }
+  rpc UpdateSelf(UpdateSelfRequest) returns (UpdateSelfResponse) {
+    option (google.api.http) = {
+      put: "/api/users/me"
+      body: "*"
+    };
+  }
+  rpc GetMenu(GetMenuRequest) returns (GetMenuResponse) {
+    option (google.api.http) = {get: "/api/users/me/menu"};
+  }
+  rpc GetStructure(GetStructureRequest) returns (GetStructureResponse) {
+    option (google.api.http) = {get: "/api/users/me/structure"};
+  }
+}
+
+message GetUserInfoRequest {
+  int32 uid = 1;
+}
+
+message GetSelfRequest {}
+
+message UpdateSelfRequest {
+  string nickname = 1;
+  string email = 2;
+  string phone = 3;
+  string avatar = 4;
+  int32 gender = 5;
+}
+
+message UpdateSelfResponse {}
+
+message GetMenuRequest {}
+
+message GetMenuResponse {
+  repeated google.protobuf.Struct menus = 1;
+}
+
+message GetStructureRequest {}
+
+message GetStructureResponse {
+  google.protobuf.Struct structure = 1;
+}

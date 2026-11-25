@@ -1,0 +1,6 @@
+bin/
+vendor/
+go.work
+go.work.sum
+*.out
+*.test

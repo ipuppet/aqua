@@ -1,0 +1,12 @@
+{
+  "name": "@aqua/tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "vue-app.json",
+    "node.json"
+  ],
+  "dependencies": {
+    "@vue/tsconfig": "^0.9.1"
+  }
+}

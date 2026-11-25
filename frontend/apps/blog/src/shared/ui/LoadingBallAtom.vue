@@ -1,0 +1,119 @@
+<template>
+  <div class="la-ball-atom la-dark la-3x">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</template>
+
+<script>
+export default { name: "LoadingBallAtom" }
+</script>
+
+<style scoped>
+.la-ball-atom,
+.la-ball-atom > div {
+  position: relative;
+  box-sizing: border-box;
+}
+.la-ball-atom {
+  display: block;
+  font-size: 0;
+  color: #fff;
+  width: 96px;
+  height: 96px;
+}
+.la-ball-atom.la-dark {
+  color: #333;
+}
+.la-ball-atom > div {
+  display: inline-block;
+  background-color: currentColor;
+  border: 0 solid currentColor;
+}
+.la-ball-atom > div:nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 60%;
+  height: 60%;
+  background: #aaa;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  animation: ball-atom-shrink 4.5s infinite linear;
+}
+.la-ball-atom > div:not(:nth-child(1)) {
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  animation: ball-atom-zindex 1.5s 0s infinite steps(2, end);
+}
+.la-ball-atom > div:not(:nth-child(1)):before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  margin-left: -15px;
+  content: "";
+  background: currentColor;
+  border-radius: 50%;
+  opacity: 0.75;
+  animation:
+    ball-atom-position 1.5s 0s infinite ease,
+    ball-atom-size 1.5s 0s infinite ease;
+}
+.la-ball-atom > div:nth-child(2) {
+  animation-delay: 0.75s;
+}
+.la-ball-atom > div:nth-child(2):before {
+  animation-delay:
+    0s,
+    -1.125s;
+}
+.la-ball-atom > div:nth-child(3) {
+  transform: rotate(120deg);
+  animation-delay: -0.25s;
+}
+.la-ball-atom > div:nth-child(3):before {
+  animation-delay:
+    -1s,
+    -0.75s;
+}
+.la-ball-atom > div:nth-child(4) {
+  transform: rotate(240deg);
+  animation-delay: 0.25s;
+}
+.la-ball-atom > div:nth-child(4):before {
+  animation-delay:
+    -0.5s,
+    -0.125s;
+}
+@keyframes ball-atom-position {
+  50% {
+    top: 100%;
+    left: 100%;
+  }
+}
+@keyframes ball-atom-size {
+  50% {
+    transform: scale(0.5, 0.5);
+  }
+}
+@keyframes ball-atom-zindex {
+  50% {
+    z-index: 10;
+  }
+}
+@keyframes ball-atom-shrink {
+  50% {
+    transform: translate(-50%, -50%) scale(0.8, 0.8);
+  }
+}
+</style>

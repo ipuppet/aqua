@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package aqua.blog.v1;
+
+import "aqua/blog/v1/common.proto";
+import "google/api/annotations.proto";
+
+option go_package = "aqua/gen/go/aqua/blog/v1;blogv1";
+
+service ArticleService {
+  rpc ListArticles(ListArticlesRequest) returns (ListArticlesResponse) {
+    option (google.api.http) = {get: "/api/articles"};
+  }
+  rpc GetArticleDetail(GetArticleRequest) returns (GetArticleDetailResponse) {
+    option (google.api.http) = {get: "/api/articles/{aid}"};
+  }
+  rpc SearchArticles(SearchArticlesRequest) returns (SearchArticlesResponse) {
+    option (google.api.http) = {get: "/api/search/{keyword}"};
+  }
+  rpc GetArchive(ListArticlesRequest) returns (ListArticlesResponse) {
+    option (google.api.http) = {get: "/api/archive"};
+  }
+  rpc ListTags(ListTagsRequest) returns (ListTagsResponse) {
+    option (google.api.http) = {get: "/api/tags"};
+  }
+  rpc ListArticlesByTag(ListArticlesByTagRequest) returns (ListArticlesByTagResponse) {
+    option (google.api.http) = {get: "/api/tags/{id}/articles"};
+  }
+  rpc GetAbout(GetAboutRequest) returns (GetAboutResponse) {
+    option (google.api.http) = {get: "/api/about"};
+  }
+}
+
+message GetArticleDetailResponse {
+  Article article = 1;
+  ArticleContext previous = 2;
+  ArticleContext next = 3;
+}

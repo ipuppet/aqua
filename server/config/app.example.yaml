@@ -1,0 +1,44 @@
+# Copy this file to app.yaml and replace every placeholder before running Aqua.
+database:
+  driver: postgres
+  host: postgres
+  port: "5432"
+  username: web
+  password: change-me
+  database: web
+  ssl_mode: disable
+redis:
+  addr: redis:6379
+  password: change-me
+  db: 0
+etcd:
+  endpoints:
+    - etcd:2379
+email:
+  from: no-reply@example.com
+  username: ""
+  password: ""
+  host: smtp.example.com
+  port: 587
+turnstile:
+  secret_key: ""
+  verify_url: https://challenges.cloudflare.com/turnstile/v0/siteverify
+internal_service:
+  token: change-me-internal-token
+jwt:
+  private_key_path: /run/secrets/web_jwt_private
+  public_key_path: /run/secrets/web_jwt_public
+telemetry:
+  file_log:
+    enabled: false
+    file_path: ""
+  otel:
+    enabled: false
+    namespace: aqua
+    otlp:
+      endpoint: ""
+      username: ""
+      api_key: ""
+meilisearch:
+  host: http://meilisearch:7700
+  api_key: change-me

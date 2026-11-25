@@ -1,0 +1,59 @@
+name: Server CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "server/**"
+      - ".github/workflows/server-ci.yml"
+  pull_request:
+    paths:
+      - "server/**"
+      - ".github/workflows/server-ci.yml"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./server
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: server/go.mod
+
+      - name: Setup Buf
+        uses: bufbuild/buf-setup-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install Go tools
+        run: |
+          set -euo pipefail
+
+          modver() {
+            go list -m -f '{{.Version}}' "$1"
+          }
+
+          go install golang.org/x/tools/cmd/goimports@"$(modver golang.org/x/tools)"
+          go install github.com/google/wire/cmd/wire@"$(modver github.com/google/wire)"
+          go install github.com/jmattheis/goverter/cmd/goverter@"$(modver github.com/jmattheis/goverter)"
+
+      - name: Run all checks
+        run: make check
+
+      - name: Ensure generated code is committed
+        run: |
+          if ! git diff --quiet; then
+            echo "Generated artifacts are out of date. Please run make check and commit changes."
+            git --no-pager diff
+            exit 1
+          fi

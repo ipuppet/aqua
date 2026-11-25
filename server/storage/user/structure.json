@@ -1,0 +1,100 @@
+{
+  "column": [
+    {
+      "key": "uid",
+      "name": "UID",
+      "width": "80",
+      "type": "text",
+      "datatype": "int"
+    },
+    {
+      "key": "avatar",
+      "name": "头像",
+      "width": "60",
+      "type": "text",
+      "datatype": "string"
+    },
+    {
+      "key": "username",
+      "name": "用户名",
+      "width": "80",
+      "type": "text",
+      "datatype": "string"
+    },
+    {
+      "key": "nickname",
+      "name": "昵称",
+      "width": "80",
+      "type": "text",
+      "datatype": "string"
+    },
+    {
+      "key": "phone",
+      "name": "手机",
+      "width": "120",
+      "type": "text",
+      "datatype": "string"
+    },
+    {
+      "key": "email",
+      "name": "邮箱",
+      "width": "120",
+      "type": "text",
+      "datatype": "string"
+    },
+    {
+      "key": "gender",
+      "name": "性别",
+      "width": "50",
+      "type": "radio",
+      "datatype": "int",
+      "items": [
+        {
+          "value": 1,
+          "name": "男"
+        },
+        {
+          "value": 0,
+          "name": "女"
+        },
+        {
+          "value": -1,
+          "name": "未知"
+        }
+      ]
+    },
+    {
+      "key": "register_at",
+      "name": "注册日期",
+      "width": "160",
+      "type": "text",
+      "datatype": "timestamp"
+    },
+    {
+      "key": "last_login_at",
+      "name": "最近登陆",
+      "width": "160",
+      "type": "text",
+      "datatype": "timestamp"
+    },
+    {
+      "key": "lock",
+      "name": "账号状态",
+      "width": "80",
+      "type": "radio",
+      "datatype": "int",
+      "items": [
+        {
+          "value": 1,
+          "name": "锁定"
+        },
+        {
+          "value": 0,
+          "name": "正常"
+        }
+      ]
+    }
+  ],
+  "adminEdit": ["lock"],
+  "canEdit": ["avatar", "nickname", "gender"]
+}

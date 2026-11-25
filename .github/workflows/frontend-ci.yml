@@ -1,0 +1,57 @@
+name: Frontend CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "frontend/**"
+      - ".github/workflows/frontend-ci.yml"
+  pull_request:
+    paths:
+      - "frontend/**"
+      - ".github/workflows/frontend-ci.yml"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      VITE_API: api.example.com
+      VITE_AUTH_COOKIE_DOMAIN: .example.com
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test shared HTTP package
+        run: npm run test -w @aqua/http
+
+      - name: Typecheck shared HTTP package
+        run: npm run check:type -w @aqua/http
+
+      - name: Check Admin
+        run: npm run check -w @aqua/admin
+
+      - name: Build Admin
+        run: npm run build -w @aqua/admin
+
+      - name: Check Blog
+        run: npm run check -w @aqua/blog
+
+      - name: Build Blog
+        run: npm run build -w @aqua/blog
+
+      - name: Check Passport
+        run: npm run check -w @aqua/passport
+
+      - name: Build Passport
+        run: npm run build -w @aqua/passport

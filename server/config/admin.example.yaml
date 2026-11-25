@@ -1,0 +1,11 @@
+# Copy this file to admin.yaml and replace every placeholder before running Aqua.
+file:
+  url_prefix: http://localhost:8080/image
+  save_path: ./storage/image
+  key: change-me
+  openlist:
+    enable: false
+    username: ""
+    password: ""
+    endpoint: ""
+    path_prefix: /images

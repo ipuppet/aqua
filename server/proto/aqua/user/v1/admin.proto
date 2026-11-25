@@ -1,0 +1,83 @@
+syntax = "proto3";
+
+package aqua.user.v1;
+
+import "aqua/user/v1/common.proto";
+import "google/api/annotations.proto";
+
+option go_package = "aqua/gen/go/aqua/user/v1;userv1";
+
+service AdminUserService {
+  rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {
+    option (google.api.http) = {get: "/api/users"};
+  }
+  rpc SearchUsers(SearchUsersRequest) returns (SearchUsersResponse) {
+    option (google.api.http) = {get: "/api/users/search/{keyword}"};
+  }
+  rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse) {
+    option (google.api.http) = {
+      put: "/api/users/{uid}"
+      body: "*"
+    };
+  }
+  rpc ListUserRoles(ListUserRolesRequest) returns (ListUserRolesResponse) {
+    option (google.api.http) = {get: "/api/users/{uid}/roles"};
+  }
+  rpc AddUserRole(AddUserRoleRequest) returns (AddUserRoleResponse) {
+    option (google.api.http) = {
+      post: "/api/users/{uid}/roles"
+      body: "*"
+    };
+  }
+  rpc DeleteUserRole(DeleteUserRoleRequest) returns (DeleteUserRoleResponse) {
+    option (google.api.http) = {delete: "/api/users/{uid}/roles/{id}"};
+  }
+  rpc ListUserPermissions(ListUserPermissionsRequest) returns (ListUserPermissionsResponse) {
+    option (google.api.http) = {get: "/api/users/{uid}/permissions"};
+  }
+  rpc ListRoles(ListRolesRequest) returns (ListRolesResponse) {
+    option (google.api.http) = {get: "/api/access-control/roles"};
+  }
+  rpc CreateRole(CreateRoleRequest) returns (CreateRoleResponse) {
+    option (google.api.http) = {
+      post: "/api/access-control/roles"
+      body: "*"
+    };
+  }
+  rpc UpdateRole(UpdateRoleRequest) returns (UpdateRoleResponse) {
+    option (google.api.http) = {
+      put: "/api/access-control/roles/{id}"
+      body: "*"
+    };
+  }
+  rpc DeleteRole(DeleteRoleRequest) returns (DeleteRoleResponse) {
+    option (google.api.http) = {delete: "/api/access-control/roles/{id}"};
+  }
+  rpc ListPermissions(ListPermissionsRequest) returns (ListPermissionsResponse) {
+    option (google.api.http) = {get: "/api/access-control/permissions"};
+  }
+  rpc CreatePermission(CreatePermissionRequest) returns (CreatePermissionResponse) {
+    option (google.api.http) = {
+      post: "/api/access-control/permissions"
+      body: "*"
+    };
+  }
+  rpc UpdatePermission(UpdatePermissionRequest) returns (UpdatePermissionResponse) {
+    option (google.api.http) = {
+      put: "/api/access-control/permissions/{id}"
+      body: "*"
+    };
+  }
+  rpc DeletePermission(DeletePermissionRequest) returns (DeletePermissionResponse) {
+    option (google.api.http) = {delete: "/api/access-control/permissions/{id}"};
+  }
+  rpc ListRolePermissions(ListRolePermissionsRequest) returns (ListRolePermissionsResponse) {
+    option (google.api.http) = {get: "/api/access-control/roles/{id}/permissions"};
+  }
+  rpc AddRolePermission(AddRolePermissionRequest) returns (AddRolePermissionResponse) {
+    option (google.api.http) = {post: "/api/access-control/roles/{role_id}/permissions/{permission_id}"};
+  }
+  rpc DeleteRolePermission(DeleteRolePermissionRequest) returns (DeleteRolePermissionResponse) {
+    option (google.api.http) = {delete: "/api/access-control/roles/{role_id}/permissions/{permission_id}"};
+  }
+}

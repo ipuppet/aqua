@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package aqua.blog.v1;
+
+import "aqua/blog/v1/common.proto";
+import "google/api/annotations.proto";
+
+option go_package = "aqua/gen/go/aqua/blog/v1;blogv1";
+
+service AdminBlogService {
+  rpc GetArticle(GetArticleRequest) returns (GetArticleResponse) {
+    option (google.api.http) = {get: "/api/articles/{aid}/edit"};
+  }
+  rpc CreateArticle(CreateArticleRequest) returns (CreateArticleResponse) {
+    option (google.api.http) = {
+      post: "/api/articles"
+      body: "*"
+    };
+  }
+  rpc UpdateArticle(UpdateArticleRequest) returns (UpdateArticleResponse) {
+    option (google.api.http) = {
+      put: "/api/articles/{aid}"
+      body: "*"
+    };
+  }
+  rpc DeleteArticle(DeleteArticleRequest) returns (DeleteArticleResponse) {
+    option (google.api.http) = {delete: "/api/articles/{aid}"};
+  }
+  rpc CreateTag(CreateTagRequest) returns (CreateTagResponse) {
+    option (google.api.http) = {
+      post: "/api/tags"
+      body: "*"
+    };
+  }
+  rpc UpdateTag(UpdateTagRequest) returns (UpdateTagResponse) {
+    option (google.api.http) = {
+      put: "/api/tags/{id}"
+      body: "*"
+    };
+  }
+  rpc DeleteTag(DeleteTagRequest) returns (DeleteTagResponse) {
+    option (google.api.http) = {delete: "/api/tags/{id}"};
+  }
+  rpc SetAbout(SetAboutRequest) returns (SetAboutResponse) {
+    option (google.api.http) = {
+      put: "/api/about"
+      body: "*"
+    };
+  }
+  rpc GetAccessStats(GetAccessStatsRequest) returns (GetAccessStatsResponse) {
+    option (google.api.http) = {get: "/api/access/{day}"};
+  }
+  rpc SyncMeili(SyncMeiliRequest) returns (SyncMeiliResponse) {
+    option (google.api.http) = {
+      post: "/api/meili/sync"
+      body: "*"
+    };
+  }
+}

@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package aqua.blog.v1;
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+
+option go_package = "aqua/gen/go/aqua/blog/v1;blogv1";
+
+service CommentService {
+  rpc ListComments(ListCommentsRequest) returns (ListCommentsResponse) {
+    option (google.api.http) = {get: "/api/comments/articles/{aid}"};
+  }
+  rpc ListChildComments(ListChildCommentsRequest) returns (ListCommentsResponse) {
+    option (google.api.http) = {get: "/api/comments/{id}/children"};
+  }
+  rpc AddComment(AddCommentRequest) returns (AddCommentResponse) {
+    option (google.api.http) = {
+      post: "/api/comments/articles/{aid}"
+      body: "*"
+    };
+  }
+}
+
+message Comment {
+  int32 id = 1;
+  int32 uid = 2;
+  int32 aid = 3;
+  string content = 4;
+  int32 parent = 5;
+  string ip = 6;
+  google.protobuf.Timestamp created_at = 7;
+  bool is_deleted = 8;
+  string reply_to = 9;
+}
+
+message ListCommentsRequest {
+  int32 aid = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+}
+
+message ListCommentsResponse {
+  repeated Comment comments = 1;
+  int32 total = 2;
+}
+
+message ListChildCommentsRequest {
+  int32 id = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+}
+
+message AddCommentRequest {
+  int32 aid = 1;
+  int32 parent_id = 2;
+  string content = 3;
+}
+
+message AddCommentResponse {}

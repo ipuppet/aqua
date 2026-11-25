@@ -1,0 +1,163 @@
+syntax = "proto3";
+
+package aqua.blog.v1;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+option go_package = "aqua/gen/go/aqua/blog/v1;blogv1";
+
+message Tag {
+  int32 id = 1;
+  string name = 2;
+}
+
+message Article {
+  int32 aid = 1;
+  string title = 2;
+  repeated Tag tags = 3;
+  string summary = 4;
+  string markdown = 5;
+  google.protobuf.Timestamp created_at = 6;
+  google.protobuf.Timestamp updated_at = 7;
+}
+
+message ArticleDescription {
+  int32 aid = 1;
+  string title = 2;
+  repeated Tag tags = 3;
+  string summary = 4;
+  google.protobuf.Timestamp created_at = 5;
+  google.protobuf.Timestamp updated_at = 6;
+}
+
+message AccessRecord {
+  int32 id = 1;
+  int32 aid = 2;
+  string ipv4 = 3;
+  string ipv6 = 4;
+  google.protobuf.Timestamp timestamp = 5;
+  string timestamp_epoch = 6;
+  string title = 7;
+}
+
+message ArticleContext {
+  int32 aid = 1;
+  string title = 2;
+}
+
+message ListArticlesRequest {
+  int32 page = 1;
+  int32 page_size = 2;
+}
+
+message ListArticlesResponse {
+  repeated Article articles = 1;
+  int32 total = 2;
+}
+
+message GetArticleRequest {
+  int32 aid = 1;
+}
+
+message GetArticleResponse {
+  Article article = 1;
+}
+
+message SearchArticlesRequest {
+  string keyword = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+}
+
+message SearchArticlesResponse {
+  repeated Article articles = 1;
+  int32 total = 2;
+}
+
+message CreateArticleRequest {
+  string title = 1;
+  string summary = 2;
+  string markdown = 3;
+  repeated Tag tags = 4;
+}
+
+message CreateArticleResponse {
+  int32 aid = 1;
+}
+
+message UpdateArticleRequest {
+  int32 aid = 1;
+  google.protobuf.StringValue title = 2;
+  google.protobuf.StringValue summary = 3;
+  google.protobuf.StringValue markdown = 4;
+  repeated Tag tags = 5;
+  bool replace_tags = 6;
+}
+
+message UpdateArticleResponse {}
+
+message DeleteArticleRequest {
+  int32 aid = 1;
+}
+
+message DeleteArticleResponse {}
+
+message ListTagsRequest {}
+
+message ListTagsResponse {
+  repeated Tag tags = 1;
+}
+
+message CreateTagRequest {
+  string name = 1;
+}
+
+message CreateTagResponse {}
+
+message UpdateTagRequest {
+  int32 id = 1;
+  string name = 2;
+}
+
+message UpdateTagResponse {}
+
+message DeleteTagRequest {
+  int32 id = 1;
+}
+
+message DeleteTagResponse {}
+
+message ListArticlesByTagRequest {
+  int32 id = 1;
+}
+
+message ListArticlesByTagResponse {
+  repeated ArticleDescription articles = 1;
+}
+
+message GetAboutRequest {}
+
+message GetAboutResponse {
+  string content = 1;
+}
+
+message SetAboutRequest {
+  string content = 1;
+}
+
+message SetAboutResponse {}
+
+message GetAccessStatsRequest {
+  int32 day = 1;
+}
+
+message GetAccessStatsResponse {
+  repeated AccessRecord records = 1;
+}
+
+message SyncMeiliRequest {}
+
+message SyncMeiliResponse {
+  int32 total_indexed = 1;
+}

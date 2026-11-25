@@ -1,0 +1,19 @@
+:root {
+  --footer-margin-top: 20px;
+  --nav-height: 70px;
+  --tags-height: 50px;
+  --menu-width: 63px;
+  --menu-width-active: 200px;
+
+  --link-color: rgb(71, 71, 71);
+  --link-hover-color: #b0b0b0;
+  --button-color: #fff;
+
+  /* Layout Variables for Height Calculation */
+  --app-content-padding: 20px;
+  --footer-height: 61px;
+  --header-height: calc(var(--nav-height) + var(--tags-height) + 1px);
+
+  /* Specific Component Heights (assumed standard across app if needed) */
+  --editor-toolbar-height: 56px; /* Bottom toolbar with save buttons */
+}

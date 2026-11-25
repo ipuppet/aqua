@@ -1,0 +1,127 @@
+syntax = "proto3";
+
+package aqua.passport.v1;
+
+import "aqua/passport/v1/admin.proto";
+import "google/api/annotations.proto";
+
+option go_package = "aqua/gen/go/aqua/passport/v1;passportv1";
+
+service PassportService {
+  rpc LoginByPassword(LoginByPasswordRequest) returns (LoginByPasswordResponse) {
+    option (google.api.http) = {
+      post: "/api/login/password"
+      body: "*"
+    };
+  }
+
+  rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse) {
+    option (google.api.http) = {
+      post: "/api/token"
+      body: "*"
+    };
+  }
+
+  rpc RegisterUser(RegisterUserRequest) returns (RegisterUserResponse) {
+    option (google.api.http) = {
+      post: "/api/register"
+      body: "*"
+    };
+  }
+
+  rpc SendVerificationCode(SendVerificationCodeRequest) returns (SendVerificationCodeResponse) {
+    option (google.api.http) = {
+      post: "/api/verify/email"
+      body: "*"
+    };
+  }
+
+  rpc ForgotPassword(ForgotPasswordRequest) returns (ForgotPasswordResponse) {
+    option (google.api.http) = {
+      post: "/api/password/forgot"
+      body: "*"
+    };
+  }
+
+  rpc ResetPassword(ResetPasswordRequest) returns (ResetPasswordResponse) {
+    option (google.api.http) = {
+      post: "/api/password/reset"
+      body: "*"
+    };
+  }
+
+  rpc ListMySessions(ListMySessionsRequest) returns (ListMySessionsResponse) {
+    option (google.api.http) = {get: "/api/sessions"};
+  }
+
+  rpc RevokeMySession(RevokeMySessionRequest) returns (RevokeMySessionResponse) {
+    option (google.api.http) = {delete: "/api/sessions/{session_id}"};
+  }
+}
+
+message LoginByPasswordRequest {
+  string account = 1;
+  string password = 2;
+}
+
+message LoginByPasswordResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+  int64 exp = 3;
+}
+
+message RefreshTokenRequest {
+  string access_token = 1;
+  string refresh_token = 2;
+}
+
+message RefreshTokenResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+}
+
+message RegisterUserRequest {
+  string username = 1;
+  string nickname = 2;
+  string email = 3;
+  string phone = 4;
+  string avatar = 5;
+  int32 gender = 6;
+  string password = 7;
+  string verification_code = 8;
+}
+
+message RegisterUserResponse {}
+
+message SendVerificationCodeRequest {
+  string email = 1;
+  string turnstile_token = 2;
+}
+
+message SendVerificationCodeResponse {}
+
+message ForgotPasswordRequest {
+  string email = 1;
+  string turnstile_token = 2;
+}
+
+message ForgotPasswordResponse {}
+
+message ResetPasswordRequest {
+  string token = 1;
+  string password = 2;
+}
+
+message ResetPasswordResponse {}
+
+message ListMySessionsRequest {}
+
+message ListMySessionsResponse {
+  repeated UserSession sessions = 1;
+}
+
+message RevokeMySessionRequest {
+  string session_id = 1;
+}
+
+message RevokeMySessionResponse {}
